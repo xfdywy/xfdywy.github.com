@@ -19,25 +19,27 @@
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1.0.2/themes/blue/pace-theme-big-counter.css">
+  <script src="//cdn.jsdelivr.net/npm/pace-js@1/pace.min.js"></script>
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"www.wyue.name","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"wyue.name","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="网易云playlist id:       推荐的网易云playlist12343270731498229283222153567631991893513        #playlist {       width: 40%;       font-size: 16px;       &#x2F;*text-indent: 16px;*&#x2F;        text-align: center">
+  <meta name="description" content="网易云playlist id:      82292832     change play list       推荐的网易云playlist12343270731498229283222153567631991893513          .change_playlist{         display: flex;         text-align: cent">
 <meta property="og:type" content="website">
 <meta property="og:title" content="音乐">
-<meta property="og:url" content="https://www.wyue.name/music/index.html">
+<meta property="og:url" content="https://wyue.name/music/index.html">
 <meta property="og:site_name" content="WangYue&#39;s  blog">
-<meta property="og:description" content="网易云playlist id:       推荐的网易云playlist12343270731498229283222153567631991893513        #playlist {       width: 40%;       font-size: 16px;       &#x2F;*text-indent: 16px;*&#x2F;        text-align: center">
+<meta property="og:description" content="网易云playlist id:      82292832     change play list       推荐的网易云playlist12343270731498229283222153567631991893513          .change_playlist{         display: flex;         text-align: cent">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2018-02-15T14:32:22.000Z">
-<meta property="article:modified_time" content="2020-04-11T06:35:30.642Z">
-<meta property="article:author" content="WangYue">
+<meta property="article:modified_time" content="2020-04-11T12:16:45.193Z">
+<meta property="article:author" content="Yue Wang">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://www.wyue.name/music/">
+<link rel="canonical" href="https://wyue.name/music/">
 
 
 <script id="page-configurations">
@@ -55,6 +57,15 @@
   
 
 
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?f1eaee28bb135190b45576a09c88a3f6";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -105,7 +116,6 @@
       <h1 class="site-title">WangYue's  blog</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
-      <p class="site-subtitle" itemprop="description">WangYue's  blog</p>
   </div>
 
   <div class="site-nav-right">
@@ -207,10 +217,6 @@
     </header>
 
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
   <div class="reading-progress-bar"></div>
 
 
@@ -251,10 +257,14 @@
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 
-<div class="change_playlist">
-网易云playlist id: <input id="playlist" value='82292832' ><input id="nodeGoto" type="button"   onClick="showplaylist()"  value = 'change playlist'  />
-</div>
 
+<div class="change_playlist" id="div1">
+    <div class="subdiv" id="subdiv1">网易云playlist id: </div>
+    <div class="subdiv" id="subdiv2" contenteditable="plaintext-only"  >82292832</div>
+    <div class="subdiv" id="subdiv3"   onClick="showplaylist()"  />change play list</div>
+
+<!--    网易云playlist id: <input id="playlist" value='82292832' ><input id="nodeGoto" type="button"   onClick="showplaylist()"  value = 'change playlist'  />-->
+</div>
 <div id="player1" class="aplayer"></div>
 
 
@@ -270,36 +280,69 @@
 
 
 <style type="text/css">
-  #playlist {
-      width: 40%;
-      font-size: 16px;
-      /*text-indent: 16px;*/
+    .change_playlist{
+        display: flex;
+        text-align: center;
+        vertical-align: center;
+        height: 100px;
+        justify-content:center;
+        width: 70%;
 
-      text-align: center;
-  }
-    #nodeGoto {
-    width: 20%;
-    color: #222;
-    font-size: 16px;
-    height: 40px
-    text-align: center;
-    background: #b7daff;
-    border: solid 2px #b7daff;
-    cursor: pointer;
-  }
-    #playlist, #nodeGoto {
-    /*float: left;*/
-    outline: none;
-    height: 38px;
-    border: solid 1px #b7daff;
-    padding: 0;
-    line-height: 38px;
-}
-}
+
+
+    }
+
+    .subdiv{
+
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        align-self: center;
+    }
+
+    #subdiv1{
+        flex: 3;
+        align-self: center;
+
+    }
+    #subdiv2{
+        flex: 3;
+        align-self: center;
+        font-size: 16px;
+        border: solid 1px #b7daff;
+    }
+    #subdiv3{
+        align-self: center;
+        flex: 2;
+        text-align: left;
+        background-color: black;
+        color: white;
+        display: block;
+
+        text-decoration: none;
+        width: 10px;
+            background: #b7daff;
+            border: solid 2px #b7daff;
+            cursor: pointer;
+    }
+
 
 </style>
 
 
+
+<script>
+
+    document.getElementById("subdiv2").addEventListener("keypress", function(e) {
+        // console.log(e);
+        if (e.code == 'Enter'){
+            e.preventDefault();
+            showplaylist();
+        }
+
+}, false);
+
+</script>
 
 
 <script type="text/javascript">
@@ -395,17 +438,18 @@
 <script type="text/javascript">
 
     async function showplaylist(){
-        var input = document.getElementById("playlist");
-        var playlist =   downloadplaylist(input.value);
+        var input = document.getElementById("subdiv2");
+        var playlist =   downloadplaylist(input.textContent);
         playlist = await playlist;
         var first_song = await  loadplaylist([playlist[0]]) ;
-        console.log(first_song)
+        // console.log(first_song)
         var ap = new APlayer({
             container: document.getElementById('player1'),
             lrcType: 1,
             fixed: false,
             audio: first_song,
         });
+        ap.play();
         var rest_songs =  await  loadplaylist(playlist.slice(1)) ;
         // console.log(rest_songs)
         ap.list.add(rest_songs);
@@ -481,9 +525,9 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="WangYue"
+    <img class="site-author-image" itemprop="image" alt="Yue Wang"
       src="https://cdn.jsdelivr.net/gh/xfdywy/blogResource@master/image/avatar.png">
-  <p class="site-author-name" itemprop="name">WangYue</p>
+  <p class="site-author-name" itemprop="name">Yue Wang</p>
   <div class="site-description" itemprop="description">A math PH.D. student, doning research at MSRA. <br> Machine learning, Python, Linux, Reading, Blog</div>
 </div>
 <div class="site-state-wrap motion-element">
@@ -514,10 +558,17 @@
         <a href="https://t.me/joinchat/E_w1Wg8LZJYLmcupFzBxQw" title="Telegram → https:&#x2F;&#x2F;t.me&#x2F;joinchat&#x2F;E_w1Wg8LZJYLmcupFzBxQw" rel="noopener" target="_blank"><i class="fab fa-telegram fa-fw"></i>Telegram</a>
       </span>
   </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
 
 
 
       </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
 
     </div>
   </aside>
@@ -545,17 +596,39 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">NaNm</span>
+      <span class="post-meta-item-text">Symbols count total: </span>
+    <span title="Symbols count total">23k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">NaN:aN</span>
+      <span class="post-meta-item-text">Reading time total &asymp;</span>
+    <span title="Reading time total">20 mins.</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
   </div>
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 
