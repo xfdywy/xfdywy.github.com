@@ -35,7 +35,7 @@
 <meta property="og:description" content="网易云playlist id:      119920417     change play list       推荐的网易云playlist1234567891199204173270731498229283222153567631991893513          .change_playlist{         display: flex;         t">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2018-02-15T14:32:22.000Z">
-<meta property="article:modified_time" content="2020-04-11T14:07:10.509Z">
+<meta property="article:modified_time" content="2020-04-11T15:09:49.686Z">
 <meta property="article:author" content="Yue Wang">
 <meta name="twitter:card" content="summary">
 
@@ -321,9 +321,9 @@
 
         text-decoration: none;
         width: 10px;
-            background: #b7daff;
-            border: solid 2px #b7daff;
-            cursor: pointer;
+        background: #b7daff;
+        border: solid 2px #b7daff;
+        cursor: pointer;
     }
 
 
@@ -340,36 +340,37 @@
             showplaylist();
         }
 
-}, false);
+    }, false);
 
 </script>
 
 
 <script type="text/javascript">
-     function downloadrul(id){
+    function downloadrul(id){
         // id = '5255987'
-        var url =  "https://api.imjad.cn/cloudmusic/?type=url&id=" +  id
-        // var url = "https://api.a632079.me/nm/url/" + id
+        // var url =  "https://api.imjad.cn/cloudmusic/?type=url&id=" +  id
+        var url = "https://api.a632079.me/nm/url/" + id
         return axios.get(url)
     }
 
 
     function downloadlry(id){
-        var url =  "https://api.imjad.cn/cloudmusic/?type=lyric&id=" +  id
+        // var url =  "https://api.imjad.cn/cloudmusic/?type=lyric&id=" +  id
+        var url = "https://api.a632079.me/nm/url/" + id
         return(axios.get(url))
     }
 
 
     function downloadname(id){
-        var url =  "https://api.imjad.cn/cloudmusic/?type=detail&id=" +  id
-
+        // var url =  "https://api.imjad.cn/cloudmusic/?type=detail&id=" +  id
+        var url = "https://api.a632079.me/nm/detail/" + id
         return(axios.get(url))
 
     }
 
     async function downloadplaylist(id){
-        var url =  "https://api.imjad.cn/cloudmusic/?type=playlist&id=" +  id;
-        // var url = "https://api.a632079.me/nm/playlist/" + id;
+        // var url =  "https://api.imjad.cn/cloudmusic/?type=playlist&id=" +  id;
+        var url = "https://api.a632079.me/nm/playlist/" + id;
         res = await  axios.get(url);
         res = res.data ;
 
@@ -395,6 +396,11 @@
             var detail = downloadname(arr[i]);
             var lrc = downloadlry(arr[i]);
             var url = downloadrul(arr[i])
+
+            // detail = await detail;
+            // lrc = await lrc;
+            // url = await url;
+
             details.push(detail);
             lrcs.push(lrc);
             urls.push(url);
@@ -419,6 +425,9 @@
             }
             catch (e) {
                 lrc='None'
+            }
+            if (urls[i].data.data[0].url == null){
+                continue
             }
 
             tmp = {
