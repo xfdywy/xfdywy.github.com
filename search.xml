@@ -377,14 +377,6 @@
       </tags>
   </entry>
   <entry>
-    <title>连续时间离散状态马氏链的转移概率矩阵与转移速率矩阵</title>
-    <url>/2020/04/09/1/</url>
-    <content><![CDATA[]]></content>
-      <tags>
-        <tag>马氏链</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Concentration Inequality(集中不等式)</title>
     <url>/2018/05/21/1/</url>
     <content><![CDATA[<p>Concentration inequality 刻画了一组随机变量的和（或者样本平均数）与其期望值的偏离程度，在算法收敛性分析过程中是非常有用的一类不等式。</p>
@@ -417,18 +409,11 @@
       </tags>
   </entry>
   <entry>
-    <title>我与我的小可爱</title>
-    <url>/2018/02/14/1/</url>
-    <content><![CDATA[<p><img data-src="https://raw.githubusercontent.com/xfdywy/xfdywy.github.io/master/images/%E8%AF%8D%E4%BA%911.png" alt="词云1"></p>
-<p><img data-src="https://raw.githubusercontent.com/xfdywy/xfdywy.github.io/master/images/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20180214161417.jpg" alt="微信图片_20180214161417"></p>
-<p><img data-src="https://raw.githubusercontent.com/xfdywy/xfdywy.github.io/master/images/%E8%AF%8D%E4%BA%91.png" alt="词云"></p>
-<p><img data-src="http://wx4.sinaimg.cn/large/a09c7f42gy1fog3m9kxnxj20b40b40t1.jpg" alt="lalal"></p>
-<h1 id="2016年10月4日"><a href="#2016年10月4日" class="headerlink" title="2016年10月4日"></a>2016年10月4日</h1><h1 id="2017年3月9日"><a href="#2017年3月9日" class="headerlink" title="2017年3月9日"></a>2017年3月9日</h1><h1 id="2018年2月14日"><a href="#2018年2月14日" class="headerlink" title="2018年2月14日"></a>2018年2月14日</h1>]]></content>
-      <categories>
-        <category>book reading</category>
-      </categories>
+    <title>连续时间离散状态马氏链的转移概率矩阵与转移速率矩阵</title>
+    <url>/2020/04/09/1/</url>
+    <content><![CDATA[]]></content>
       <tags>
-        <tag>-读书笔记</tag>
+        <tag>马氏链</tag>
       </tags>
   </entry>
   <entry>
@@ -449,6 +434,21 @@
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 <p> <img data-src="https://img-1253424161.cos.ap-shanghai.myqcloud.com/test.gif" alt="123"></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>我与我的小可爱</title>
+    <url>/2018/02/14/1/</url>
+    <content><![CDATA[<p><img data-src="https://raw.githubusercontent.com/xfdywy/xfdywy.github.io/master/images/%E8%AF%8D%E4%BA%911.png" alt="词云1"></p>
+<p><img data-src="https://raw.githubusercontent.com/xfdywy/xfdywy.github.io/master/images/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20180214161417.jpg" alt="微信图片_20180214161417"></p>
+<p><img data-src="https://raw.githubusercontent.com/xfdywy/xfdywy.github.io/master/images/%E8%AF%8D%E4%BA%91.png" alt="词云"></p>
+<p><img data-src="http://wx4.sinaimg.cn/large/a09c7f42gy1fog3m9kxnxj20b40b40t1.jpg" alt="lalal"></p>
+<h1 id="2016年10月4日"><a href="#2016年10月4日" class="headerlink" title="2016年10月4日"></a>2016年10月4日</h1><h1 id="2017年3月9日"><a href="#2017年3月9日" class="headerlink" title="2017年3月9日"></a>2017年3月9日</h1><h1 id="2018年2月14日"><a href="#2018年2月14日" class="headerlink" title="2018年2月14日"></a>2018年2月14日</h1>]]></content>
+      <categories>
+        <category>book reading</category>
+      </categories>
+      <tags>
+        <tag>-读书笔记</tag>
+      </tags>
   </entry>
   <entry>
     <title>我的第一篇博文</title>
