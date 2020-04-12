@@ -780,4 +780,68 @@
         <tag>effective</tag>
       </tags>
   </entry>
+  <entry>
+    <title>好用的软件</title>
+    <url>/2020/04/12/1/</url>
+    <content><![CDATA[<p>总结一下自己在win10系统上用到的好用的软件，每次换新系统都必装的一些软件。</p>
+<a id="more"></a>
+
+<h1 id="小众神器们"><a href="#小众神器们" class="headerlink" title="小众神器们"></a>小众神器们</h1><ul>
+<li><p>文件内容搜索     FileLocator Lite</p>
+</li>
+<li><p>文件搜索       Everything</p>
+</li>
+<li><p>快捷搜索       Listary</p>
+</li>
+<li><p>将远程ssh网盘等映射成本地  RaiDriver</p>
+</li>
+<li><p>小书匠，写markdown神奇</p>
+</li>
+<li><p>图片查看    Honey View</p>
+</li>
+<li><p>对比两个文件的diff Beyond Compare</p>
+</li>
+<li><p>压缩软件必备 Bandizip</p>
+</li>
+</ul>
+<ul>
+<li><p>好看的cmd，内置了bash命令支持 Cmder</p>
+</li>
+<li><p>视频播放器 Potplayer</p>
+</li>
+<li><p>文件多地自动备份 goodsync</p>
+</li>
+<li><p>与latex配合的很好的简单pdf阅读器 sumatra</p>
+</li>
+<li><p>截图神器 snipaste</p>
+</li>
+<li><p>连接远程服务器神器 mobaxterm</p>
+</li>
+<li><p>录屏生成gif screentogif</p>
+</li>
+<li><p>网络流量管理 fiddler</p>
+</li>
+<li><p>微博备份 稳部落</p>
+</li>
+</ul>
+<h1 id="大众常规好用"><a href="#大众常规好用" class="headerlink" title="大众常规好用"></a>大众常规好用</h1><ul>
+<li><p>文本编辑器  vscode</p>
+</li>
+<li><p>latex编辑器 texstudio</p>
+</li>
+<li><p>记笔记 onenote</p>
+</li>
+<li><p>win10 pdf标注软件  xodo</p>
+</li>
+<li><p>常规pdf阅读器  pdf-xchange</p>
+</li>
+<li><p>日程任务规划   microsoft todo</p>
+</li>
+</ul>
+<p> .</p>
+]]></content>
+      <tags>
+        <tag>软件</tag>
+      </tags>
+  </entry>
 </search>
