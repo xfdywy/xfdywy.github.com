@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>c++ notebook</title>
+    <url>/2016/08/10/2/</url>
+    <content><![CDATA[<p>就用这个帖子记录一下自己学习c++遇到的一些小细节吧</p>
+<p>#1 atof </p>
+<blockquote>
+<p><a href="http://blog.csdn.net/zhaoyl03/article/details/8176387" target="_blank" rel="noopener">http://blog.csdn.net/zhaoyl03/article/details/8176387</a></p>
+</blockquote>
+<p>它将ascII字符串转换为相应的单精度浮点数，比如传入”1.234”，经过处理后就返回float类型的数1.234 。类似的还有atoi 、atol、itoa、ftoa等等。</p>
+<p>#2 随机数</p>
+<blockquote>
+<p><a href="http://www.cnblogs.com/egmkang/archive/2012/09/06/2673253.html" target="_blank" rel="noopener">http://www.cnblogs.com/egmkang/archive/2012/09/06/2673253.html</a></p>
+</blockquote>
+<p>　　标准把随机数抽象成随机数引擎和分布两部分.引擎用来产生随机数,分布产生特定分布的随机数(比如平均分布,正太分布等).</p>
+<p>　　标准提供三种常用的引擎:linear_congruential_engine,mersenne_twister_engine和subtract_with_carry_engine.第一种是线性同余算法,第二种是梅森旋转算法,第三种带进位的线性同余算法.第一种是最常用的,而且速度也是非常快的; 第二种号称是最好的伪随机数生成器;第三种没用过….</p>
+<p>　　随机数引擎接受一个整形参数当作种子,不提供的话,会使用默认值. 推荐使用random_device来产生一个随机数当作种子.(windows下爱咋整咋整,谁叫windows的random_device是调用rand_s)</p>
+]]></content>
+      <tags>
+        <tag>-c++程序人生</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Latex 写中文毕业论文</title>
     <url>/2019/03/01/1/</url>
     <content><![CDATA[<p>最近疫情在家写毕业论文，前期折腾了一下latex模版的相关事情，算是搞的比较清楚了，所以后期论文写起来也比较顺利，遇到问题也可以随时解决。现在论文也搞得差不多了，准备记录一下。</p>
@@ -65,27 +86,6 @@
       <tags>
         <tag>Latex</tag>
         <tag>中文</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>c++ notebook</title>
-    <url>/2016/08/10/2/</url>
-    <content><![CDATA[<p>就用这个帖子记录一下自己学习c++遇到的一些小细节吧</p>
-<p>#1 atof </p>
-<blockquote>
-<p><a href="http://blog.csdn.net/zhaoyl03/article/details/8176387" target="_blank" rel="noopener">http://blog.csdn.net/zhaoyl03/article/details/8176387</a></p>
-</blockquote>
-<p>它将ascII字符串转换为相应的单精度浮点数，比如传入”1.234”，经过处理后就返回float类型的数1.234 。类似的还有atoi 、atol、itoa、ftoa等等。</p>
-<p>#2 随机数</p>
-<blockquote>
-<p><a href="http://www.cnblogs.com/egmkang/archive/2012/09/06/2673253.html" target="_blank" rel="noopener">http://www.cnblogs.com/egmkang/archive/2012/09/06/2673253.html</a></p>
-</blockquote>
-<p>　　标准把随机数抽象成随机数引擎和分布两部分.引擎用来产生随机数,分布产生特定分布的随机数(比如平均分布,正太分布等).</p>
-<p>　　标准提供三种常用的引擎:linear_congruential_engine,mersenne_twister_engine和subtract_with_carry_engine.第一种是线性同余算法,第二种是梅森旋转算法,第三种带进位的线性同余算法.第一种是最常用的,而且速度也是非常快的; 第二种号称是最好的伪随机数生成器;第三种没用过….</p>
-<p>　　随机数引擎接受一个整形参数当作种子,不提供的话,会使用默认值. 推荐使用random_device来产生一个随机数当作种子.(windows下爱咋整咋整,谁叫windows的random_device是调用rand_s)</p>
-]]></content>
-      <tags>
-        <tag>-c++程序人生</tag>
       </tags>
   </entry>
   <entry>
@@ -444,16 +444,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>我的第一篇博文</title>
-    <url>/2016/03/01/1/</url>
-    <content><![CDATA[<p>这是<strong>新的开始</strong>，我用hexo创建了第一篇文章。</p>
-<p>通过下面的命令，就可以创建新文章</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new 新的开始</span><br></pre></td></tr></table></figure>
-
-<p>感觉非常好。</p>
-]]></content>
-  </entry>
-  <entry>
     <title>我与我的小可爱</title>
     <url>/2018/02/14/1/</url>
     <content><![CDATA[<p><img data-src="https://raw.githubusercontent.com/xfdywy/xfdywy.github.io/master/images/%E8%AF%8D%E4%BA%911.png" alt="词云1"></p>
@@ -469,6 +459,16 @@
       </tags>
   </entry>
   <entry>
+    <title>我的第一篇博文</title>
+    <url>/2016/03/01/1/</url>
+    <content><![CDATA[<p>这是<strong>新的开始</strong>，我用hexo创建了第一篇文章。</p>
+<p>通过下面的命令，就可以创建新文章</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new 新的开始</span><br></pre></td></tr></table></figure>
+
+<p>感觉非常好。</p>
+]]></content>
+  </entry>
+  <entry>
     <title>&#39;wangyuehahah&#39;</title>
     <url>/2016/03/02/1/</url>
     <content><![CDATA[<p>###i just want to have a try</p>
@@ -477,6 +477,73 @@
 </blockquote>
 <p>this is 20160402</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>好用的软件</title>
+    <url>/2020/04/12/2/</url>
+    <content><![CDATA[<p>总结一下自己在win10系统上用到的好用的软件，每次换新系统都必装的一些软件。原则是，方方面面用的顺手。</p>
+<a id="more"></a>
+
+<p>我以后遇到，会来更新这个list的，如果有大佬有好的私房软件，欢迎在底下留言呀。</p>
+<h1 id="小众神器们"><a href="#小众神器们" class="headerlink" title="小众神器们"></a>小众神器们</h1><ul>
+<li><p>文件内容搜索     FileLocator Lite</p>
+</li>
+<li><p>文件搜索       Everything</p>
+</li>
+<li><p>快捷搜索       Listary</p>
+</li>
+<li><p>将远程ssh网盘等映射成本地  RaiDriver</p>
+</li>
+<li><p>小书匠，写markdown 神器</p>
+</li>
+<li><p>图片查看    Honey View</p>
+</li>
+<li><p>对比两个文件的diff Beyond Compare</p>
+</li>
+<li><p>压缩软件必备 Bandizip</p>
+</li>
+</ul>
+<ul>
+<li><p>好看的cmd，内置了bash命令支持 Cmder</p>
+</li>
+<li><p>视频播放器 Potplayer</p>
+</li>
+<li><p>文件多地自动备份 goodsync</p>
+</li>
+<li><p>与latex配合的很好的简单pdf阅读器 sumatra</p>
+</li>
+<li><p>截图神器 snipaste</p>
+</li>
+<li><p>连接远程服务器神器 mobaxterm</p>
+</li>
+<li><p>录屏生成gif screentogif</p>
+</li>
+<li><p>网络流量管理 fiddler</p>
+</li>
+<li><p>微博备份 稳部落</p>
+</li>
+</ul>
+<h1 id="大众常规好用"><a href="#大众常规好用" class="headerlink" title="大众常规好用"></a>大众常规好用</h1><ul>
+<li><p>文本编辑器  vscode</p>
+</li>
+<li><p>latex编辑器 texstudio</p>
+</li>
+<li><p>记笔记 onenote</p>
+</li>
+<li><p>win10 pdf标注软件  xodo</p>
+</li>
+<li><p>常规pdf阅读器  pdf-xchange</p>
+</li>
+<li><p>日程任务规划   microsoft todo</p>
+</li>
+</ul>
+<p> .</p>
+]]></content>
+      <tags>
+        <tag>软件</tag>
+        <tag>日常办公</tag>
+        <tag>工具</tag>
+      </tags>
   </entry>
   <entry>
     <title>新开一坑，读书笔记</title>
@@ -718,149 +785,6 @@
       </tags>
   </entry>
   <entry>
-    <title>手动输入网易云音乐歌单创建hexo 音乐播放器</title>
-    <url>/2018/05/06/1/</url>
-    <content><![CDATA[<p><strong>!我终于来填坑啦！ <a href="/20120/04/12/1/">来这里看吧，</a></strong></p>
-<p>先挖个坑。欢迎点击左边的  <code>Music</code>来看看效果。也可以用这个链接<a href="https://wyue.name/music/">https://wyue.name/music/</a></p>
-<p>已经实现了的是在hexo博客上，搞一个音乐播放器。<br>播放器选的是aplayer。<br>通过输入网易云音乐的歌单id，来创建播放列表。可以手动输入歌单id。</p>
-<a id="more"></a>
-
-<p>提前感谢各位大佬给的网易云音乐api。</p>
-<p>学习到的几点：</p>
-<h2 id="javascript-http-get-请求处理"><a href="#javascript-http-get-请求处理" class="headerlink" title="javascript http get 请求处理"></a>javascript http get 请求处理</h2><h2 id="javascript-json-处理"><a href="#javascript-json-处理" class="headerlink" title="javascript json 处理"></a>javascript json 处理</h2><h2 id="javascript-function-循环等"><a href="#javascript-function-循环等" class="headerlink" title="javascript function 循环等"></a>javascript function 循环等</h2><h2 id="简单css"><a href="#简单css" class="headerlink" title="简单css"></a>简单css</h2><p>生成音乐页面的全部的code 在这里</p>
-<blockquote>
-<p><a href="https://gist.githubusercontent.com/xfdywy/e7fcaaf6f1c12975455f08478881c3cf/raw/154f07a9a853bd1b1ceaa9f6bb43983b85167fcc/music.md" target="_blank" rel="noopener">https://gist.githubusercontent.com/xfdywy/e7fcaaf6f1c12975455f08478881c3cf/raw/154f07a9a853bd1b1ceaa9f6bb43983b85167fcc/music.md</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>aplayer</tag>
-        <tag>网易云音乐api</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Effective Python 59 specific ways 读书笔记 第一章</title>
-    <url>/2018/03/27/2/</url>
-    <content><![CDATA[<p>今天开始学习这本书，准备用自己的博客做点笔记。<br>我自己计划着，笔记的内容会会随着自己的理解而变化，在想到好的组织方式之前，我选择“抄书”吧。预计一章一篇博客。总共8章。<br>今天开始第一章</p>
-<h1 id="第1条：-确认自己用的python版本"><a href="#第1条：-确认自己用的python版本" class="headerlink" title="第1条： 确认自己用的python版本"></a>第1条： 确认自己用的python版本</h1><p>这个不用多说了，py2和py3 还是有一定 的兼容性问题的，但是大部分都不成问题，跑代码前一定要先确认好自己的python版本。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">python --version</span><br></pre></td></tr></table></figure>
-<p>这个是系统命令版本</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line">sys.version_info</span><br><span class="line">sys.version</span><br></pre></td></tr></table></figure>
-<h1 id="第2条：-遵循PEP8-风格指南"><a href="#第2条：-遵循PEP8-风格指南" class="headerlink" title="第2条： 遵循PEP8 风格指南"></a>第2条： 遵循PEP8 风格指南</h1><p>PEP8 全称 Python Enhancement Proposal #8.下面是比较重要的几点：</p>
-<h2 id="空白"><a href="#空白" class="headerlink" title="空白"></a>空白</h2><ul>
-<li>用space 而不是 tab</li>
-<li>每一层缩进都用4个space</li>
-<li>每行字符不超过79个</li>
-<li>函数与类之间应该用两个空行隔开</li>
-<li>同一个类不同方法用一个空行隔开</li>
-<li>下标不要添加空格，同理还有给参数赋值</li>
-<li>变量赋值的时候左右各写一个空格</li>
-</ul>
-<h2 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h2><ul>
-<li>函数，变量和属性应该用小写，并且各个单词之间用下划线连接</li>
-<li>类与异常，单词首字母大写</li>
-<li>受保护的实例属性，应该以下划线开头</li>
-</ul>
-<h2 id="表达式和语句"><a href="#表达式和语句" class="headerlink" title="表达式和语句"></a>表达式和语句</h2><ul>
-<li><code>if a is not b</code> 而不是 <code>if not a is b</code></li>
-<li>不要用检测长度的方法来判断是否为空</li>
-<li>不要编写单行的 <code>if， for，while</code></li>
-<li>import 总是放在开头</li>
-<li>import语句要按照 标准库模块，第三方模块，自用模块来分成三块，并且按照字母序排列</li>
-</ul>
-<h1 id="第3条：了解bytes，str和unicode的区别。"><a href="#第3条：了解bytes，str和unicode的区别。" class="headerlink" title="第3条：了解bytes，str和unicode的区别。"></a>第3条：了解bytes，str和unicode的区别。</h1><p>Unicode 是「字符集」<br>UTF-8 是「编码规则」gbk等也是</p>
-<p>python3有两种表示字符序列的类型：bytes和str<br>python2有三种表示字符序列的类型： str和unicode</p>
-<p>python3中的str相当于py2的unicode<br>python3中的str只能encode<br>python3中str可以被encode成bytes，例如gbk utf-8等</p>
-<p>python2中unicode是一种最基本的数据类型。需要加u在前面表示。<code>u &#39;abc&#39;</code>. unicode可以被encode成str（如gbk，utf-8等）<br>python2中str是指utf8 gbk这样的编码过的对象，可以被decode成unicode。默认字符串是str.它本身存储的就是字节码（bytes）。</p>
-<h1 id="第4条：-用辅助函数来取代复杂表达式"><a href="#第4条：-用辅助函数来取代复杂表达式" class="headerlink" title="第4条： 用辅助函数来取代复杂表达式"></a>第4条： 用辅助函数来取代复杂表达式</h1><p>不要过度运用python的语法特性，写那些特别复杂且难以理解的表达式，特别是如果要反复利用的话，更要包装一下成函数。</p>
-<h1 id="第5条：-了解切割序列的办法"><a href="#第5条：-了解切割序列的办法" class="headerlink" title="第5条： 了解切割序列的办法"></a>第5条： 了解切割序列的办法</h1><p>起始元素包含，结束元素不包含</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a[:<span class="number">4</span>]</span><br><span class="line">a[<span class="number">-4</span>:]</span><br><span class="line">a[<span class="number">3</span>:<span class="number">-3</span>]</span><br></pre></td></tr></table></figure>
-<p>slice列表时，start越界也不会出问题，但是访问单个元素的时候会报错<br>slice列表是一份拷贝，不是引用</p>
-<h1 id="第6条：-单次切片操作内，不要同时使用start，-end，-stride"><a href="#第6条：-单次切片操作内，不要同时使用start，-end，-stride" class="headerlink" title="第6条： 单次切片操作内，不要同时使用start， end， stride"></a>第6条： 单次切片操作内，不要同时使用start， end， stride</h1><p>python提供了<code>list[start:end:stride]</code>的操作<br>stride 为负数表示反过来取</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x[::<span class="number">-1</span>]</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>effective</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>好用的软件</title>
-    <url>/2020/04/12/1/</url>
-    <content><![CDATA[<p>总结一下自己在win10系统上用到的好用的软件，每次换新系统都必装的一些软件。原则是，方方面面用的顺手。</p>
-<a id="more"></a>
-
-<p>我以后遇到，会来更新这个list的，如果有大佬有好的私房软件，欢迎在底下留言呀。</p>
-<h1 id="小众神器们"><a href="#小众神器们" class="headerlink" title="小众神器们"></a>小众神器们</h1><ul>
-<li><p>文件内容搜索     FileLocator Lite</p>
-</li>
-<li><p>文件搜索       Everything</p>
-</li>
-<li><p>快捷搜索       Listary</p>
-</li>
-<li><p>将远程ssh网盘等映射成本地  RaiDriver</p>
-</li>
-<li><p>小书匠，写markdown 神器</p>
-</li>
-<li><p>图片查看    Honey View</p>
-</li>
-<li><p>对比两个文件的diff Beyond Compare</p>
-</li>
-<li><p>压缩软件必备 Bandizip</p>
-</li>
-</ul>
-<ul>
-<li><p>好看的cmd，内置了bash命令支持 Cmder</p>
-</li>
-<li><p>视频播放器 Potplayer</p>
-</li>
-<li><p>文件多地自动备份 goodsync</p>
-</li>
-<li><p>与latex配合的很好的简单pdf阅读器 sumatra</p>
-</li>
-<li><p>截图神器 snipaste</p>
-</li>
-<li><p>连接远程服务器神器 mobaxterm</p>
-</li>
-<li><p>录屏生成gif screentogif</p>
-</li>
-<li><p>网络流量管理 fiddler</p>
-</li>
-<li><p>微博备份 稳部落</p>
-</li>
-</ul>
-<h1 id="大众常规好用"><a href="#大众常规好用" class="headerlink" title="大众常规好用"></a>大众常规好用</h1><ul>
-<li><p>文本编辑器  vscode</p>
-</li>
-<li><p>latex编辑器 texstudio</p>
-</li>
-<li><p>记笔记 onenote</p>
-</li>
-<li><p>win10 pdf标注软件  xodo</p>
-</li>
-<li><p>常规pdf阅读器  pdf-xchange</p>
-</li>
-<li><p>日程任务规划   microsoft todo</p>
-</li>
-</ul>
-<p> .</p>
-]]></content>
-      <tags>
-        <tag>软件</tag>
-        <tag>日常办公</tag>
-        <tag>工具</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>静态博客网页中的网易云音乐播放器</title>
     <url>/2020/04/12/1/</url>
     <content><![CDATA[<p>(终于填了<a href="/2018/05/06/1/">之前</a>的坑)</p>
@@ -932,6 +856,82 @@
       <tags>
         <tag>music</tag>
         <tag>hexo blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>手动输入网易云音乐歌单创建hexo 音乐播放器</title>
+    <url>/2018/05/06/1/</url>
+    <content><![CDATA[<p><strong>!我终于来填坑啦！ <a href="/2020/04/12/1/">来这里看吧，</a></strong></p>
+<p>先挖个坑。欢迎点击左边的  <code>Music</code>来看看效果。也可以用这个链接<a href="https://wyue.name/music/">https://wyue.name/music/</a></p>
+<p>已经实现了的是在hexo博客上，搞一个音乐播放器。<br>播放器选的是aplayer。<br>通过输入网易云音乐的歌单id，来创建播放列表。可以手动输入歌单id。</p>
+<a id="more"></a>
+
+<p>提前感谢各位大佬给的网易云音乐api。</p>
+<p>学习到的几点：</p>
+<h2 id="javascript-http-get-请求处理"><a href="#javascript-http-get-请求处理" class="headerlink" title="javascript http get 请求处理"></a>javascript http get 请求处理</h2><h2 id="javascript-json-处理"><a href="#javascript-json-处理" class="headerlink" title="javascript json 处理"></a>javascript json 处理</h2><h2 id="javascript-function-循环等"><a href="#javascript-function-循环等" class="headerlink" title="javascript function 循环等"></a>javascript function 循环等</h2><h2 id="简单css"><a href="#简单css" class="headerlink" title="简单css"></a>简单css</h2><p>生成音乐页面的全部的code 在这里</p>
+<blockquote>
+<p><a href="https://gist.githubusercontent.com/xfdywy/e7fcaaf6f1c12975455f08478881c3cf/raw/154f07a9a853bd1b1ceaa9f6bb43983b85167fcc/music.md" target="_blank" rel="noopener">https://gist.githubusercontent.com/xfdywy/e7fcaaf6f1c12975455f08478881c3cf/raw/154f07a9a853bd1b1ceaa9f6bb43983b85167fcc/music.md</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>aplayer</tag>
+        <tag>网易云音乐api</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Effective Python 59 specific ways 读书笔记 第一章</title>
+    <url>/2018/03/27/2/</url>
+    <content><![CDATA[<p>今天开始学习这本书，准备用自己的博客做点笔记。<br>我自己计划着，笔记的内容会会随着自己的理解而变化，在想到好的组织方式之前，我选择“抄书”吧。预计一章一篇博客。总共8章。<br>今天开始第一章</p>
+<h1 id="第1条：-确认自己用的python版本"><a href="#第1条：-确认自己用的python版本" class="headerlink" title="第1条： 确认自己用的python版本"></a>第1条： 确认自己用的python版本</h1><p>这个不用多说了，py2和py3 还是有一定 的兼容性问题的，但是大部分都不成问题，跑代码前一定要先确认好自己的python版本。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">python --version</span><br></pre></td></tr></table></figure>
+<p>这个是系统命令版本</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line">sys.version_info</span><br><span class="line">sys.version</span><br></pre></td></tr></table></figure>
+<h1 id="第2条：-遵循PEP8-风格指南"><a href="#第2条：-遵循PEP8-风格指南" class="headerlink" title="第2条： 遵循PEP8 风格指南"></a>第2条： 遵循PEP8 风格指南</h1><p>PEP8 全称 Python Enhancement Proposal #8.下面是比较重要的几点：</p>
+<h2 id="空白"><a href="#空白" class="headerlink" title="空白"></a>空白</h2><ul>
+<li>用space 而不是 tab</li>
+<li>每一层缩进都用4个space</li>
+<li>每行字符不超过79个</li>
+<li>函数与类之间应该用两个空行隔开</li>
+<li>同一个类不同方法用一个空行隔开</li>
+<li>下标不要添加空格，同理还有给参数赋值</li>
+<li>变量赋值的时候左右各写一个空格</li>
+</ul>
+<h2 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h2><ul>
+<li>函数，变量和属性应该用小写，并且各个单词之间用下划线连接</li>
+<li>类与异常，单词首字母大写</li>
+<li>受保护的实例属性，应该以下划线开头</li>
+</ul>
+<h2 id="表达式和语句"><a href="#表达式和语句" class="headerlink" title="表达式和语句"></a>表达式和语句</h2><ul>
+<li><code>if a is not b</code> 而不是 <code>if not a is b</code></li>
+<li>不要用检测长度的方法来判断是否为空</li>
+<li>不要编写单行的 <code>if， for，while</code></li>
+<li>import 总是放在开头</li>
+<li>import语句要按照 标准库模块，第三方模块，自用模块来分成三块，并且按照字母序排列</li>
+</ul>
+<h1 id="第3条：了解bytes，str和unicode的区别。"><a href="#第3条：了解bytes，str和unicode的区别。" class="headerlink" title="第3条：了解bytes，str和unicode的区别。"></a>第3条：了解bytes，str和unicode的区别。</h1><p>Unicode 是「字符集」<br>UTF-8 是「编码规则」gbk等也是</p>
+<p>python3有两种表示字符序列的类型：bytes和str<br>python2有三种表示字符序列的类型： str和unicode</p>
+<p>python3中的str相当于py2的unicode<br>python3中的str只能encode<br>python3中str可以被encode成bytes，例如gbk utf-8等</p>
+<p>python2中unicode是一种最基本的数据类型。需要加u在前面表示。<code>u &#39;abc&#39;</code>. unicode可以被encode成str（如gbk，utf-8等）<br>python2中str是指utf8 gbk这样的编码过的对象，可以被decode成unicode。默认字符串是str.它本身存储的就是字节码（bytes）。</p>
+<h1 id="第4条：-用辅助函数来取代复杂表达式"><a href="#第4条：-用辅助函数来取代复杂表达式" class="headerlink" title="第4条： 用辅助函数来取代复杂表达式"></a>第4条： 用辅助函数来取代复杂表达式</h1><p>不要过度运用python的语法特性，写那些特别复杂且难以理解的表达式，特别是如果要反复利用的话，更要包装一下成函数。</p>
+<h1 id="第5条：-了解切割序列的办法"><a href="#第5条：-了解切割序列的办法" class="headerlink" title="第5条： 了解切割序列的办法"></a>第5条： 了解切割序列的办法</h1><p>起始元素包含，结束元素不包含</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a[:<span class="number">4</span>]</span><br><span class="line">a[<span class="number">-4</span>:]</span><br><span class="line">a[<span class="number">3</span>:<span class="number">-3</span>]</span><br></pre></td></tr></table></figure>
+<p>slice列表时，start越界也不会出问题，但是访问单个元素的时候会报错<br>slice列表是一份拷贝，不是引用</p>
+<h1 id="第6条：-单次切片操作内，不要同时使用start，-end，-stride"><a href="#第6条：-单次切片操作内，不要同时使用start，-end，-stride" class="headerlink" title="第6条： 单次切片操作内，不要同时使用start， end， stride"></a>第6条： 单次切片操作内，不要同时使用start， end， stride</h1><p>python提供了<code>list[start:end:stride]</code>的操作<br>stride 为负数表示反过来取</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x[::<span class="number">-1</span>]</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>effective</tag>
       </tags>
   </entry>
 </search>
