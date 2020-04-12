@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wyue.name/board/index.html</loc>
+    
+    <lastmod>2020-04-12T13:51:45.446Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wyue.name/2018/02/14/1/</loc>
     
     <lastmod>2020-04-12T13:48:27.887Z</lastmod>
@@ -68,13 +75,6 @@
     <loc>https://wyue.name/2018/05/21/1/</loc>
     
     <lastmod>2020-04-12T09:05:23.956Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wyue.name/board/index.html</loc>
-    
-    <lastmod>2020-04-11T16:24:30.416Z</lastmod>
     
   </url>
   
