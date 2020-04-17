@@ -1,25 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>c++ notebook</title>
-    <url>/2016/08/10/2/</url>
-    <content><![CDATA[<p>就用这个帖子记录一下自己学习c++遇到的一些小细节吧</p>
-<p>#1 atof </p>
-<blockquote>
-<p><a href="http://blog.csdn.net/zhaoyl03/article/details/8176387" target="_blank" rel="noopener">http://blog.csdn.net/zhaoyl03/article/details/8176387</a></p>
-</blockquote>
-<p>它将ascII字符串转换为相应的单精度浮点数，比如传入”1.234”，经过处理后就返回float类型的数1.234 。类似的还有atoi 、atol、itoa、ftoa等等。</p>
-<p>#2 随机数</p>
-<blockquote>
-<p><a href="http://www.cnblogs.com/egmkang/archive/2012/09/06/2673253.html" target="_blank" rel="noopener">http://www.cnblogs.com/egmkang/archive/2012/09/06/2673253.html</a></p>
-</blockquote>
-<p>　　标准把随机数抽象成随机数引擎和分布两部分.引擎用来产生随机数,分布产生特定分布的随机数(比如平均分布,正太分布等).</p>
-<p>　　标准提供三种常用的引擎:linear_congruential_engine,mersenne_twister_engine和subtract_with_carry_engine.第一种是线性同余算法,第二种是梅森旋转算法,第三种带进位的线性同余算法.第一种是最常用的,而且速度也是非常快的; 第二种号称是最好的伪随机数生成器;第三种没用过….</p>
-<p>　　随机数引擎接受一个整形参数当作种子,不提供的话,会使用默认值. 推荐使用random_device来产生一个随机数当作种子.(windows下爱咋整咋整,谁叫windows的random_device是调用rand_s)</p>
-]]></content>
-      <tags>
-        <tag>-c++程序人生</tag>
-      </tags>
+    <title>linux/git</title>
+    <url>/2018/03/29/1/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Latex 写中文毕业论文</title>
@@ -109,28 +93,6 @@
       <tags>
         <tag>Latex</tag>
         <tag>中文</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>vnc 连接服务器</title>
-    <url>/2018/04/23/1/</url>
-    <content><![CDATA[<p>vnc 连接服务器 使用 Xfce desktop tab 键不能自动补全<br>这是因为tab键被系统默认为是 switch window的快捷键了，修改了就好了</p>
-<a id="more"></a>
-
-<blockquote>
-<p>Application Menu &gt; Settings &gt; Window Manager<br>选择 Keyboard 标签 清除 Switch<br>window  的快捷键设置</p>
-</blockquote>
-<p>vnc 连接服务器 使用xfce desktop  系统时间，桌面切换等图标没有靠右，类似于windows右下键的时间状态栏等，看起来很难受。设置方法为：</p>
-<blockquote>
-<p>面板空白处右击 &gt; panel &gt; panel preferences &gt; items<br>点右边的加号，新建一个separator（分隔符），选中新建的separator，用上下按钮调整位置，分隔符后面的都靠右<br>双击 separator，保证 设置成expand<br>完成， 最终设置大概是这样<br><img data-src="https://img-1253424161.cos.ap-shanghai.myqcloud.com/xsj/2018/4/1523849612319.jpg" alt="vnc panel"></p>
-</blockquote>
-]]></content>
-      <tags>
-        <tag>vnc</tag>
-        <tag>tab</tag>
-        <tag>xfce</tag>
-        <tag>自动补全</tag>
-        <tag>状态栏</tag>
       </tags>
   </entry>
   <entry>
@@ -248,141 +210,47 @@
       </tags>
   </entry>
   <entry>
-    <title>linux/git</title>
-    <url>/2018/03/29/1/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>服务器升级记录</title>
-    <url>/2018/04/25/1/</url>
-    <content><![CDATA[<p> 最近学校的服务器被信息中心检测出来有很多高危漏洞，给了个通知限期整改。<br> 主要修改了<br> openssh<br> vnc<br> apache<br> mysql<br> 记录如下：</p>
- <a id="more"></a>
-
-<h1 id="openssh"><a href="#openssh" class="headerlink" title="openssh"></a>openssh</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://mirrors.syringanetworks.net/pub/OpenBSD/OpenSSH/portable/openssh-7.5p1.tar.gz</span><br><span class="line"><span class="built_in">cd</span> openssh-7.5p1 </span><br><span class="line">./configure --prefix=/usr --sysconfdir=/etc/ssh --with-md5-passwords --with-pam --with-zlib --with-openssl-includes=/usr --with-privsep-path=/var/lib/sshd </span><br><span class="line">make </span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
-<h2 id="一些辅助工作"><a href="#一些辅助工作" class="headerlink" title="一些辅助工作"></a>一些辅助工作</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">install -v -m755    contrib/ssh-copy-id /usr/bin </span><br><span class="line">install -v -m644    contrib/ssh-copy-id.1 /usr/share/man/man1 </span><br><span class="line">install -v -m755 -d /usr/share/doc/openssh-7.5p1 </span><br><span class="line">install -v -m644    INSTALL LICENCE OVERVIEW README* /usr/share/doc/openssh-7.5p1 </span><br><span class="line"></span><br><span class="line">cp -p contrib/RedHat/sshd.init /etc/init.d/sshd </span><br><span class="line">chmod +x /etc/init.d/sshd</span><br></pre></td></tr></table></figure>
-
-<h2 id="修改-ssh的配置"><a href="#修改-ssh的配置" class="headerlink" title="修改 ssh的配置"></a>修改 ssh的配置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"PermitRootLogin yes"</span> &gt;&gt; /etc/ssh/sshd_config</span><br><span class="line"><span class="built_in">echo</span> <span class="string">'X11Forwarding yes'</span> &gt;&gt; /etc/ssh/sshd_config </span><br><span class="line">或者直接进去修改</span><br><span class="line">vim /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure>
-
-<h2 id="启动和开机启动"><a href="#启动和开机启动" class="headerlink" title="启动和开机启动"></a>启动和开机启动</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">service sshd restart</span><br><span class="line">chkconfig --add sshd</span><br><span class="line">chkconfig sshd on</span><br><span class="line">chkconfig --list |grep sshd</span><br></pre></td></tr></table></figure>
-
-<p> 大功告成</p>
-<h1 id="vnc"><a href="#vnc" class="headerlink" title="vnc"></a>vnc</h1><p>关闭就ok了</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">service vncserver stop</span><br></pre></td></tr></table></figure>
-
-<h1 id="apache-httpd"><a href="#apache-httpd" class="headerlink" title="apache httpd"></a>apache httpd</h1><p>将旧版本的httpd 升级到2.4.33</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget http://ftp.tsukuba.wide.ad.jp/software/apache//apr/apr-1.6.3.tar.gz</span><br><span class="line">wget http://ftp.yz.yamagata-u.ac.jp/pub/network/apache//apr/apr-util-1.6.1.tar.gz</span><br><span class="line">tar xzvf apr-1.6.3.tar.gz</span><br><span class="line">mv apr-1.6.3 httpd-2.4.33/srclib/apr</span><br><span class="line">tar xzvf apr-util-1.6.1.tar.gz </span><br><span class="line">mv apr-util-1.6.1 httpd-2.4.33/srclib/apr-util</span><br><span class="line">cd httpd-2.4.33</span><br><span class="line">./configure --prefix=/usr/local/httpd24 --enable-so --enable-ssl --enable-cgi --enable-rewrite --with-zlib --with-pcre --with-included-apr  --enable-modules=most --enable-mpms-shared=all --with-mpm=prefork</span><br><span class="line">make</span><br><span class="line">make install</span><br><span class="line">cp /usr/local/httpd24/bin/apachectl  /etc/init.d/httpd24</span><br><span class="line">service httpd24 restart</span><br></pre></td></tr></table></figure>
-<h2 id="设置开机启动"><a href="#设置开机启动" class="headerlink" title="设置开机启动"></a>设置开机启动</h2><p>vim 打开 /etc/init.d/httpd24 , 然后再第二行加上下面这两行</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># chkconfig:   2345 90 10</span><br><span class="line"></span><br><span class="line"># description:  myservice</span><br></pre></td></tr></table></figure>
-<p>之后</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chkconfig --add httpd24</span><br><span class="line">chkconfig  httpd24 on  </span><br><span class="line">chkconfig --list</span><br></pre></td></tr></table></figure>
-<h2 id="遇到的坑"><a href="#遇到的坑" class="headerlink" title="遇到的坑"></a>遇到的坑</h2><blockquote>
-<p>httpd: Could not reliably determine the server’s fully qualified domain name, using 127.0.0.1 for ServerName</p>
-</blockquote>
-<p>在安装目录下找到httpd.conf(我这里就是/usr/local/httpd24/conf/httpd.conf )，把ServerName <a href="http://www.example.com:80" target="_blank" rel="noopener">www.example.com:80</a> 前面的#去掉再重启就ok了。</p>
-<h1 id="mysql"><a href="#mysql" class="headerlink" title="mysql"></a>mysql</h1><p> 将旧版本的mysql升级到8.0版本，参照<a href="https://www.if-not-true-then-false.com/2010/install-mysql-on-fedora-centos-red-hat-rhel/" target="_blank" rel="noopener">该处</a></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum localinstall https:&#x2F;&#x2F;dev.mysql.com&#x2F;get&#x2F;mysql57-community-release-el6-11.noarch.rpm</span><br><span class="line">yum --enablerepo&#x3D;mysql80-community install mysql-community-server</span><br><span class="line">service mysqld start</span><br><span class="line">chkconfig --levels 235 mysqld on</span><br></pre></td></tr></table></figure>
-<p> 之后就是配置mysql数据库了，注意到在执行 service mysqld start 的时候。屏幕上会显示出一个临时的root 密码 </p>
+    <title>c++ notebook</title>
+    <url>/2016/08/10/2/</url>
+    <content><![CDATA[<p>就用这个帖子记录一下自己学习c++遇到的一些小细节吧</p>
+<p>#1 atof </p>
 <blockquote>
-<p>A temporary password is generated for root@localhost: V9R.Blr:baQH</p>
+<p><a href="http://blog.csdn.net/zhaoyl03/article/details/8176387" target="_blank" rel="noopener">http://blog.csdn.net/zhaoyl03/article/details/8176387</a></p>
 </blockquote>
-<p> 用这个密码登录后执行</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ALTER USER <span class="string">'root'</span>@<span class="string">'localhost'</span> IDENTIFIED BY <span class="string">'root123'</span></span><br></pre></td></tr></table></figure>
-
-<p>如果出现</p>
+<p>它将ascII字符串转换为相应的单精度浮点数，比如传入”1.234”，经过处理后就返回float类型的数1.234 。类似的还有atoi 、atol、itoa、ftoa等等。</p>
+<p>#2 随机数</p>
 <blockquote>
-<p>ERROR 1819 (HY000): Your password does not satisfy the current policy requirements</p>
+<p><a href="http://www.cnblogs.com/egmkang/archive/2012/09/06/2673253.html" target="_blank" rel="noopener">http://www.cnblogs.com/egmkang/archive/2012/09/06/2673253.html</a></p>
 </blockquote>
-<p>说明密码太简单不符合要求，设置一本复杂的就行。如果实在嫌麻烦，先修改后，输入这样的代码先查看进行密码检查的变量，再根据需要修改这些变量。</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SHOW</span> <span class="keyword">VARIABLES</span> <span class="keyword">LIKE</span> <span class="string">'validate_password%'</span>; </span><br><span class="line"><span class="keyword">set</span> <span class="keyword">global</span> validate_password_length=<span class="number">3</span>;</span><br></pre></td></tr></table></figure>
-
-
-
-
+<p>　　标准把随机数抽象成随机数引擎和分布两部分.引擎用来产生随机数,分布产生特定分布的随机数(比如平均分布,正太分布等).</p>
+<p>　　标准提供三种常用的引擎:linear_congruential_engine,mersenne_twister_engine和subtract_with_carry_engine.第一种是线性同余算法,第二种是梅森旋转算法,第三种带进位的线性同余算法.第一种是最常用的,而且速度也是非常快的; 第二种号称是最好的伪随机数生成器;第三种没用过….</p>
+<p>　　随机数引擎接受一个整形参数当作种子,不提供的话,会使用默认值. 推荐使用random_device来产生一个随机数当作种子.(windows下爱咋整咋整,谁叫windows的random_device是调用rand_s)</p>
 ]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
       <tags>
-        <tag>vnc</tag>
-        <tag>linux</tag>
-        <tag>openssh</tag>
-        <tag>mysql</tag>
-        <tag>apache httpd</tag>
+        <tag>-c++程序人生</tag>
       </tags>
   </entry>
   <entry>
-    <title>查看linux文件大小等文件相关操作</title>
-    <url>/2018/04/24/1/</url>
-    <content><![CDATA[<a id="more"></a>
-
-<p>查看各个“盘”使用大小，总大小等</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">df -h</span><br></pre></td></tr></table></figure>
-<p>这里， -h 表示用k，m，g等单位显示大小信息，方便查看<br>查看文件夹已使用大小</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">du -h --max-depth=1</span><br></pre></td></tr></table></figure>
-<p>这里， -h 同上， –max-depth 表示显示目录的层级最深是多少层</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ls</span><br><span class="line">ll</span><br></pre></td></tr></table></figure>
-<p>查看当前目录下的文件和文件夹，及相关信息</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cp file dir</span><br><span class="line">\cp -f file dir</span><br><span class="line"></span><br><span class="line">cp -r dir dir</span><br><span class="line">\cp -rf dir dir</span><br></pre></td></tr></table></figure>
-<p>如果需要覆盖目标文件夹里面的文件，并且没有提示，需要用第二种方法，否则哪怕加了<code>-f</code> 系统也会提示是否覆盖。这是因为系统一般都会配置别名，你输入的是<code>cp</code>,但是实际上执行的是<code>cp -i</code> 所以无论如何也会有覆盖提示了。<br>如果需要复制整个文件夹及里面的文件，需要用 <code>-r</code>,同理，如果要强制覆盖，也需要在cp前面加斜杠。</p>
-]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Concentration Inequality(集中不等式)</title>
-    <url>/2018/05/21/1/</url>
-    <content><![CDATA[<p>Concentration inequality 刻画了一组随机变量的和（或者样本平均数）与其期望值的偏离程度，在算法收敛性分析过程中是非常有用的一类不等式。</p>
+    <title>vnc 连接服务器</title>
+    <url>/2018/04/23/1/</url>
+    <content><![CDATA[<p>vnc 连接服务器 使用 Xfce desktop tab 键不能自动补全<br>这是因为tab键被系统默认为是 switch window的快捷键了，修改了就好了</p>
 <a id="more"></a>
 
-<p>这次主要总结一下最近一段时间遇到的集中不等式，不仅是不等式形式，而是不等式之间的相互关系的归纳总结，包括：</p>
-<ul>
-<li>Markov’s inequality</li>
-<li>Chebyshev’s inequality</li>
-<li>Chernoff bounds</li>
-<li>Hoeffding’s inequality</li>
-<li>Bennett’s inequality </li>
-<li>Bernstein’s inequalities</li>
-<li>Azuma’s inequality</li>
-<li>Doob’s martingale inequality</li>
-</ul>
-<h1 id="Markov’s-inequality"><a href="#Markov’s-inequality" class="headerlink" title="Markov’s inequality"></a>Markov’s inequality</h1><h2 id="条件："><a href="#条件：" class="headerlink" title="条件："></a>条件：</h2><blockquote>
-<p>X 是非负随机变量, a&gt;0</p>
-</blockquote>
-<h2 id="公式："><a href="#公式：" class="headerlink" title="公式："></a>公式：</h2><blockquote>
-<p>$$ \operatorname{P}(X \geq a) \leq \frac{\operatorname{E}(X)}{a} $$</p>
-</blockquote>
-<h2 id="直观："><a href="#直观：" class="headerlink" title="直观："></a>直观：</h2><p>一个随机变量的取值大于a的概率要小于其期望值除以a。直观很简单就是，假设10个人的平均工资是1块钱，那么如果超过2两个人的工资超过5块钱了，那么哪怕剩下来的人没有工资，这10个人的工资平均也超过1块钱了. 这里大家的工资就是随机变量X, a就是5， E(x)就是1， $P(X \le a)$ 就是0.2</p>
-<h2 id="变形"><a href="#变形" class="headerlink" title="变形"></a>变形</h2><p>Markov’s inequality 最简单，也最“松”，只用到了随机变量的期望信息。</p>
-<p>这里“松”是指，对于相同的a，我们求出来的概率最小，或者要求相同的概率，得到的a最大（不必要）。</p>
-]]></content>
-      <categories>
-        <category>math</category>
-      </categories>
-      <tags>
-        <tag>Concentration Inequality</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>连续时间离散状态马氏链的转移概率矩阵与转移速率矩阵</title>
-    <url>/2020/04/09/1/</url>
-    <content><![CDATA[]]></content>
-      <tags>
-        <tag>马氏链</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>&#39;wangyuehahah&#39;</title>
-    <url>/2016/03/02/1/</url>
-    <content><![CDATA[<p>###i just want to have a try</p>
 <blockquote>
-<p>hallo world</p>
+<p>Application Menu &gt; Settings &gt; Window Manager<br>选择 Keyboard 标签 清除 Switch<br>window  的快捷键设置</p>
 </blockquote>
-<p>this is 20160402</p>
+<p>vnc 连接服务器 使用xfce desktop  系统时间，桌面切换等图标没有靠右，类似于windows右下键的时间状态栏等，看起来很难受。设置方法为：</p>
+<blockquote>
+<p>面板空白处右击 &gt; panel &gt; panel preferences &gt; items<br>点右边的加号，新建一个separator（分隔符），选中新建的separator，用上下按钮调整位置，分隔符后面的都靠右<br>双击 separator，保证 设置成expand<br>完成， 最终设置大概是这样<br><img data-src="https://img-1253424161.cos.ap-shanghai.myqcloud.com/xsj/2018/4/1523849612319.jpg" alt="vnc panel"></p>
+</blockquote>
 ]]></content>
+      <tags>
+        <tag>vnc</tag>
+        <tag>tab</tag>
+        <tag>xfce</tag>
+        <tag>自动补全</tag>
+        <tag>状态栏</tag>
+      </tags>
   </entry>
   <entry>
     <title>redhat6.2相关配置（yum，r，rstudio，ipythonnotebook）</title>
@@ -458,6 +326,327 @@
       </tags>
   </entry>
   <entry>
+    <title>服务器升级记录</title>
+    <url>/2018/04/25/1/</url>
+    <content><![CDATA[<p> 最近学校的服务器被信息中心检测出来有很多高危漏洞，给了个通知限期整改。<br> 主要修改了<br> openssh<br> vnc<br> apache<br> mysql<br> 记录如下：</p>
+ <a id="more"></a>
+
+<h1 id="openssh"><a href="#openssh" class="headerlink" title="openssh"></a>openssh</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://mirrors.syringanetworks.net/pub/OpenBSD/OpenSSH/portable/openssh-7.5p1.tar.gz</span><br><span class="line"><span class="built_in">cd</span> openssh-7.5p1 </span><br><span class="line">./configure --prefix=/usr --sysconfdir=/etc/ssh --with-md5-passwords --with-pam --with-zlib --with-openssl-includes=/usr --with-privsep-path=/var/lib/sshd </span><br><span class="line">make </span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+<h2 id="一些辅助工作"><a href="#一些辅助工作" class="headerlink" title="一些辅助工作"></a>一些辅助工作</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">install -v -m755    contrib/ssh-copy-id /usr/bin </span><br><span class="line">install -v -m644    contrib/ssh-copy-id.1 /usr/share/man/man1 </span><br><span class="line">install -v -m755 -d /usr/share/doc/openssh-7.5p1 </span><br><span class="line">install -v -m644    INSTALL LICENCE OVERVIEW README* /usr/share/doc/openssh-7.5p1 </span><br><span class="line"></span><br><span class="line">cp -p contrib/RedHat/sshd.init /etc/init.d/sshd </span><br><span class="line">chmod +x /etc/init.d/sshd</span><br></pre></td></tr></table></figure>
+
+<h2 id="修改-ssh的配置"><a href="#修改-ssh的配置" class="headerlink" title="修改 ssh的配置"></a>修改 ssh的配置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"PermitRootLogin yes"</span> &gt;&gt; /etc/ssh/sshd_config</span><br><span class="line"><span class="built_in">echo</span> <span class="string">'X11Forwarding yes'</span> &gt;&gt; /etc/ssh/sshd_config </span><br><span class="line">或者直接进去修改</span><br><span class="line">vim /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure>
+
+<h2 id="启动和开机启动"><a href="#启动和开机启动" class="headerlink" title="启动和开机启动"></a>启动和开机启动</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">service sshd restart</span><br><span class="line">chkconfig --add sshd</span><br><span class="line">chkconfig sshd on</span><br><span class="line">chkconfig --list |grep sshd</span><br></pre></td></tr></table></figure>
+
+<p> 大功告成</p>
+<h1 id="vnc"><a href="#vnc" class="headerlink" title="vnc"></a>vnc</h1><p>关闭就ok了</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">service vncserver stop</span><br></pre></td></tr></table></figure>
+
+<h1 id="apache-httpd"><a href="#apache-httpd" class="headerlink" title="apache httpd"></a>apache httpd</h1><p>将旧版本的httpd 升级到2.4.33</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget http://ftp.tsukuba.wide.ad.jp/software/apache//apr/apr-1.6.3.tar.gz</span><br><span class="line">wget http://ftp.yz.yamagata-u.ac.jp/pub/network/apache//apr/apr-util-1.6.1.tar.gz</span><br><span class="line">tar xzvf apr-1.6.3.tar.gz</span><br><span class="line">mv apr-1.6.3 httpd-2.4.33/srclib/apr</span><br><span class="line">tar xzvf apr-util-1.6.1.tar.gz </span><br><span class="line">mv apr-util-1.6.1 httpd-2.4.33/srclib/apr-util</span><br><span class="line">cd httpd-2.4.33</span><br><span class="line">./configure --prefix=/usr/local/httpd24 --enable-so --enable-ssl --enable-cgi --enable-rewrite --with-zlib --with-pcre --with-included-apr  --enable-modules=most --enable-mpms-shared=all --with-mpm=prefork</span><br><span class="line">make</span><br><span class="line">make install</span><br><span class="line">cp /usr/local/httpd24/bin/apachectl  /etc/init.d/httpd24</span><br><span class="line">service httpd24 restart</span><br></pre></td></tr></table></figure>
+<h2 id="设置开机启动"><a href="#设置开机启动" class="headerlink" title="设置开机启动"></a>设置开机启动</h2><p>vim 打开 /etc/init.d/httpd24 , 然后再第二行加上下面这两行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># chkconfig:   2345 90 10</span><br><span class="line"></span><br><span class="line"># description:  myservice</span><br></pre></td></tr></table></figure>
+<p>之后</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chkconfig --add httpd24</span><br><span class="line">chkconfig  httpd24 on  </span><br><span class="line">chkconfig --list</span><br></pre></td></tr></table></figure>
+<h2 id="遇到的坑"><a href="#遇到的坑" class="headerlink" title="遇到的坑"></a>遇到的坑</h2><blockquote>
+<p>httpd: Could not reliably determine the server’s fully qualified domain name, using 127.0.0.1 for ServerName</p>
+</blockquote>
+<p>在安装目录下找到httpd.conf(我这里就是/usr/local/httpd24/conf/httpd.conf )，把ServerName <a href="http://www.example.com:80" target="_blank" rel="noopener">www.example.com:80</a> 前面的#去掉再重启就ok了。</p>
+<h1 id="mysql"><a href="#mysql" class="headerlink" title="mysql"></a>mysql</h1><p> 将旧版本的mysql升级到8.0版本，参照<a href="https://www.if-not-true-then-false.com/2010/install-mysql-on-fedora-centos-red-hat-rhel/" target="_blank" rel="noopener">该处</a></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum localinstall https:&#x2F;&#x2F;dev.mysql.com&#x2F;get&#x2F;mysql57-community-release-el6-11.noarch.rpm</span><br><span class="line">yum --enablerepo&#x3D;mysql80-community install mysql-community-server</span><br><span class="line">service mysqld start</span><br><span class="line">chkconfig --levels 235 mysqld on</span><br></pre></td></tr></table></figure>
+<p> 之后就是配置mysql数据库了，注意到在执行 service mysqld start 的时候。屏幕上会显示出一个临时的root 密码 </p>
+<blockquote>
+<p>A temporary password is generated for root@localhost: V9R.Blr:baQH</p>
+</blockquote>
+<p> 用这个密码登录后执行</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ALTER USER <span class="string">'root'</span>@<span class="string">'localhost'</span> IDENTIFIED BY <span class="string">'root123'</span></span><br></pre></td></tr></table></figure>
+
+<p>如果出现</p>
+<blockquote>
+<p>ERROR 1819 (HY000): Your password does not satisfy the current policy requirements</p>
+</blockquote>
+<p>说明密码太简单不符合要求，设置一本复杂的就行。如果实在嫌麻烦，先修改后，输入这样的代码先查看进行密码检查的变量，再根据需要修改这些变量。</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SHOW</span> <span class="keyword">VARIABLES</span> <span class="keyword">LIKE</span> <span class="string">'validate_password%'</span>; </span><br><span class="line"><span class="keyword">set</span> <span class="keyword">global</span> validate_password_length=<span class="number">3</span>;</span><br></pre></td></tr></table></figure>
+
+
+
+
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>vnc</tag>
+        <tag>openssh</tag>
+        <tag>mysql</tag>
+        <tag>apache httpd</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>查看linux文件大小等文件相关操作</title>
+    <url>/2018/04/24/1/</url>
+    <content><![CDATA[<a id="more"></a>
+
+<p>查看各个“盘”使用大小，总大小等</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">df -h</span><br></pre></td></tr></table></figure>
+<p>这里， -h 表示用k，m，g等单位显示大小信息，方便查看<br>查看文件夹已使用大小</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">du -h --max-depth=1</span><br></pre></td></tr></table></figure>
+<p>这里， -h 同上， –max-depth 表示显示目录的层级最深是多少层</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ls</span><br><span class="line">ll</span><br></pre></td></tr></table></figure>
+<p>查看当前目录下的文件和文件夹，及相关信息</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cp file dir</span><br><span class="line">\cp -f file dir</span><br><span class="line"></span><br><span class="line">cp -r dir dir</span><br><span class="line">\cp -rf dir dir</span><br></pre></td></tr></table></figure>
+<p>如果需要覆盖目标文件夹里面的文件，并且没有提示，需要用第二种方法，否则哪怕加了<code>-f</code> 系统也会提示是否覆盖。这是因为系统一般都会配置别名，你输入的是<code>cp</code>,但是实际上执行的是<code>cp -i</code> 所以无论如何也会有覆盖提示了。<br>如果需要复制整个文件夹及里面的文件，需要用 <code>-r</code>,同理，如果要强制覆盖，也需要在cp前面加斜杠。</p>
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Concentration Inequality(集中不等式)</title>
+    <url>/2018/05/21/1/</url>
+    <content><![CDATA[<p><strong><a href="/2020/04/17/1/">[更新啦，来这里看吧，终于把所有内容都写全了，各个不等式的形式还有他们之间的关联讨论等等]</a></strong></p>
+<p>Concentration inequality 刻画了一组随机变量的和（或者样本平均数）与其期望值的偏离程度，在算法收敛性分析过程中是非常有用的一类不等式。</p>
+<a id="more"></a>
+
+<p>这次主要总结一下最近一段时间遇到的集中不等式，不仅是不等式形式，而是不等式之间的相互关系的归纳总结，包括：</p>
+<ul>
+<li>Markov’s inequality</li>
+<li>Chebyshev’s inequality</li>
+<li>Chernoff bounds</li>
+<li>Hoeffding’s inequality</li>
+<li>Bennett’s inequality </li>
+<li>Bernstein’s inequalities</li>
+<li>Azuma’s inequality</li>
+<li>Doob’s martingale inequality</li>
+</ul>
+<h1 id="Markov’s-inequality"><a href="#Markov’s-inequality" class="headerlink" title="Markov’s inequality"></a>Markov’s inequality</h1><h2 id="条件："><a href="#条件：" class="headerlink" title="条件："></a>条件：</h2><blockquote>
+<p>X 是非负随机变量, a&gt;0</p>
+</blockquote>
+<h2 id="公式："><a href="#公式：" class="headerlink" title="公式："></a>公式：</h2><blockquote>
+<p>$$ \operatorname{P}(X \geq a) \leq \frac{\operatorname{E}(X)}{a} $$</p>
+</blockquote>
+<h2 id="直观："><a href="#直观：" class="headerlink" title="直观："></a>直观：</h2><p>一个随机变量的取值大于a的概率要小于其期望值除以a。直观很简单就是，假设10个人的平均工资是1块钱，那么如果超过2两个人的工资超过5块钱了，那么哪怕剩下来的人没有工资，这10个人的工资平均也超过1块钱了. 这里大家的工资就是随机变量X, a就是5， E(x)就是1， $P(X \le a)$ 就是0.2</p>
+<h2 id="变形"><a href="#变形" class="headerlink" title="变形"></a>变形</h2><p>Markov’s inequality 最简单，也最“松”，只用到了随机变量的期望信息。</p>
+<p>这里“松”是指，对于相同的a，我们求出来的概率最小，或者要求相同的概率，得到的a最大（不必要）。</p>
+]]></content>
+      <categories>
+        <category>math</category>
+      </categories>
+      <tags>
+        <tag>Concentration Inequality</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>连续时间离散状态马氏链的转移概率矩阵与转移速率矩阵</title>
+    <url>/2020/04/09/1/</url>
+    <content><![CDATA[]]></content>
+      <tags>
+        <tag>马氏链</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Concentration Inequality(集中不等式)更新版</title>
+    <url>/2020/04/17/1/</url>
+    <content><![CDATA[<p>Concentration inequality 刻画了一组随机变量的和（或者样本平均数）与其期望值的偏离程度，在算法收敛性分析过程中是非常有用的一类不等式。</p>
+<a id="more"></a>
+
+
+<p>这次主要总结一下最近一段时间遇到的集中不等式，不仅是不等式形式，也有不等式之间的相互关系的归纳总结，包括：</p>
+<!-- - Markov's inequality
+- Chebyshev's inequality
+- Chernoff bounds
+- Hoeffding's inequality
+- Bennett's inequality 
+- Bernstein's inequalities
+- Azuma's inequality
+- Doob's martingale inequality -->
+
+
+<ul>
+<li><a href="#markovs-inequality">Markov’s inequality</a><ul>
+<li><a href="#%e6%9d%a1%e4%bb%b6">条件：</a></li>
+<li><a href="#%e5%85%ac%e5%bc%8f">公式：</a></li>
+<li><a href="#%e7%9b%b4%e8%a7%82%e4%b8%8e%e8%ae%a8%e8%ae%ba">直观与讨论：</a></li>
+</ul>
+</li>
+<li><a href="#chebyshevs-inequality">Chebyshev’s inequality</a><ul>
+<li><a href="#%e6%9d%a1%e4%bb%b6-1">条件</a></li>
+<li><a href="#%e5%85%ac%e5%bc%8f-1">公式</a></li>
+<li><a href="#%e7%9b%b4%e8%a7%82%e4%b8%8e%e8%ae%a8%e8%ae%ba-1">直观与讨论</a></li>
+</ul>
+</li>
+<li><a href="#chernoff-bounds">Chernoff bounds</a><ul>
+<li><a href="#%e6%9d%a1%e4%bb%b6-2">条件</a></li>
+<li><a href="#%e5%85%ac%e5%bc%8f-2">公式</a></li>
+<li><a href="#%e7%9b%b4%e8%a7%82%e4%b8%8e%e8%ae%a8%e8%ae%ba-2">直观与讨论</a></li>
+</ul>
+</li>
+<li><a href="#hoeffdings-inequality">Hoeffding’s inequality</a><ul>
+<li><a href="#%e6%9d%a1%e4%bb%b6-3">条件</a></li>
+<li><a href="#%e5%85%ac%e5%bc%8f-3">公式</a></li>
+<li><a href="#%e7%9b%b4%e8%a7%82%e4%b8%8e%e8%ae%a8%e8%ae%ba-3">直观与讨论</a></li>
+</ul>
+</li>
+<li><a href="#weighted-hoeffding-inequality">Weighted Hoeffding Inequality</a><ul>
+<li><a href="#%e6%9d%a1%e4%bb%b6-4">条件</a></li>
+<li><a href="#%e5%85%ac%e5%bc%8f-4">公式</a></li>
+<li><a href="#%e7%9b%b4%e8%a7%82%e4%b8%8e%e8%ae%a8%e8%ae%ba-4">直观与讨论</a></li>
+</ul>
+</li>
+<li><a href="#bennetts-inequality">Bennett’s inequality</a><ul>
+<li><a href="#%e6%9d%a1%e4%bb%b6-5">条件</a></li>
+<li><a href="#%e5%85%ac%e5%bc%8f-5">公式</a></li>
+<li><a href="#%e7%9b%b4%e8%a7%82%e4%b8%8e%e8%ae%a8%e8%ae%ba-5">直观与讨论</a></li>
+</ul>
+</li>
+<li><a href="#bernsteins-inequalities">Bernstein’s inequalities</a><ul>
+<li><a href="#%e6%9d%a1%e4%bb%b6-6">条件</a></li>
+<li><a href="#%e5%85%ac%e5%bc%8f-6">公式</a></li>
+<li><a href="#%e7%9b%b4%e8%a7%82%e4%b8%8e%e8%ae%a8%e8%ae%ba-6">直观与讨论</a></li>
+</ul>
+</li>
+<li><a href="#azumas-inequality">Azuma’s inequality</a><ul>
+<li><a href="#%e6%9d%a1%e4%bb%b6-7">条件</a></li>
+<li><a href="#%e5%85%ac%e5%bc%8f-7">公式</a></li>
+<li><a href="#%e7%9b%b4%e8%a7%82%e4%b8%8e%e8%ae%a8%e8%ae%ba-7">直观与讨论</a></li>
+</ul>
+</li>
+<li><a href="#doobs-martingale-inequality">Doob’s martingale inequality</a><ul>
+<li><a href="#%e6%9d%a1%e4%bb%b6-8">条件</a></li>
+<li><a href="#%e5%85%ac%e5%bc%8f-8">公式</a></li>
+<li><a href="#%e7%9b%b4%e8%a7%82%e4%b8%8e%e8%ae%a8%e8%ae%ba-8">直观与讨论</a></li>
+</ul>
+</li>
+<li><a href="#%e6%95%b4%e4%bd%93%e8%ae%a8%e8%ae%ba">整体讨论</a></li>
+</ul>
+<h1 id="Markov’s-inequality"><a href="#Markov’s-inequality" class="headerlink" title="Markov’s inequality"></a>Markov’s inequality</h1><h2 id="条件："><a href="#条件：" class="headerlink" title="条件："></a>条件：</h2><blockquote>
+<p>X 是非负随机变量, a&gt;0</p>
+</blockquote>
+<h2 id="公式："><a href="#公式：" class="headerlink" title="公式："></a>公式：</h2><blockquote>
+<p>$$ \operatorname{P}(X \geq a) \leq \frac{\operatorname{E}(X)}{a} $$</p>
+</blockquote>
+<h2 id="直观与讨论："><a href="#直观与讨论：" class="headerlink" title="直观与讨论："></a>直观与讨论：</h2><p>一个随机变量的取值大于a的概率要小于其期望值除以a。直观很简单就是，假设10个人的平均工资是1块钱，那么如果超过2两个人的工资超过5块钱了，那么哪怕剩下来的人没有工资，这10个人的工资平均也超过1块钱了. 这里大家的工资就是随机变量X, a就是5， E(x)就是1， $P(X \le a)$ 就是0.2</p>
+<p>Markov’s inequality 最简单，也最“松”，只用到了随机变量的期望信息。<br>这里“松”是指，对于相同的a，我们求出来的概率最小，或者要求相同的概率，得到的a最大（不必要）。</p>
+<h1 id="Chebyshev’s-inequality"><a href="#Chebyshev’s-inequality" class="headerlink" title="Chebyshev’s inequality"></a>Chebyshev’s inequality</h1><h2 id="条件"><a href="#条件" class="headerlink" title="条件"></a>条件</h2><blockquote>
+<p> $X$ 为均值为$\mu$， 方差为$\sigma^2$ 的随机变量, 任意实数$k$</p>
+</blockquote>
+<h2 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h2><blockquote>
+<p>$$ P(|X-\mu|\ge k\sigma)\le \frac{1}{k^2} $$</p>
+</blockquote>
+<h2 id="直观与讨论"><a href="#直观与讨论" class="headerlink" title="直观与讨论"></a>直观与讨论</h2><p>Chebyshev 不等式刻画了一个随机变量偏离其均值的概率。直观来说就是离均值越远，概率越小，并且小的速率收到方差的控制。由于Chebyshev不等式不依赖分布的具体信息，只依赖一阶矩和二阶矩，因此应用广泛。</p>
+<p>Chebyshev不等式通过考虑方差和期望的信息， 比markov不等式更加细致。</p>
+<h1 id="Chernoff-bounds"><a href="#Chernoff-bounds" class="headerlink" title="Chernoff bounds"></a>Chernoff bounds</h1><h2 id="条件-1"><a href="#条件-1" class="headerlink" title="条件"></a>条件</h2><blockquote>
+<p>$X$ 是n个独立随机变量 $x_1, \cdots , x_n$ 的和， $t$是任意大于0的实数</p>
+</blockquote>
+<h2 id="公式-1"><a href="#公式-1" class="headerlink" title="公式"></a>公式</h2><blockquote>
+<p>$$ P(x_i&gt;a)=P(e^{t x_i}&gt;e^{ta}) \le e^{-ta}E[ e^{tX}] $$<br>$$ P(X&gt;a) \le e^{-ta}E[\Pi_i e^{tx_i}] $$<br>$$ P(X&gt;a) \le min_{t&gt;0}\left[ e^{-ta}E[\Pi_i e^{tx_i}] \right] $$</p>
+</blockquote>
+<h2 id="直观与讨论-1"><a href="#直观与讨论-1" class="headerlink" title="直观与讨论"></a>直观与讨论</h2><p>Chernoff 算是一个技巧，本质上是Markov不等式的直接应用。如看上文公式中的第一个式子，左边的等号就是Chernoff的核心技巧，即将随机变量转化成指数的形式，并且引入一个新的参数$t$，右边的$\le$就是直接应用了Markov不等式。</p>
+<p>下面可以看到Chernoff的技巧是得到 Hoeffding不等式的关键。简单来说，Hoeffding不等式是Chernoff的应用。</p>
+<h1 id="Hoeffding’s-inequality"><a href="#Hoeffding’s-inequality" class="headerlink" title="Hoeffding’s inequality"></a>Hoeffding’s inequality</h1><h2 id="条件-2"><a href="#条件-2" class="headerlink" title="条件"></a>条件</h2><blockquote>
+<p>$x_i, \cdots, x_n$ 是一族独立的随机变量，且  $a_i&lt; x_i &lt; b_i$, $\bar{X} = \frac{1}{n}(x_1 + \cdots + c_n)$ </p>
+</blockquote>
+<h2 id="公式-2"><a href="#公式-2" class="headerlink" title="公式"></a>公式</h2><blockquote>
+<p>   $$ P(\bar{x} - E[\bar{x}]\ge t) \le exp\left( -\frac{2n^2t^2}{\sum_{i=1}^n (b_i-a_i)^2} \right)$$  </p>
+</blockquote>
+<h2 id="直观与讨论-2"><a href="#直观与讨论-2" class="headerlink" title="直观与讨论"></a>直观与讨论</h2><p>Hoeffding 不等式刻画了一族随机变量的和偏离其期望的概率。只要求随机变量独立且有界，对随机变量的分布和各阶矩没有任何要求，并且这些随机变量可以不同分布。</p>
+<p>Hoeffding不等式在机器学习算法的收敛性证明中起到了非常重要的作用，尤其是需要刻画算法的输出在多大概率的意义下可以收敛到我们希望的结果中这一情况下，我们可以利用hoeffding 不等式得到随机算法输出的结果与其期望结果的关系，从而得到想要的高概率界。</p>
+<h1 id="Weighted-Hoeffding-Inequality"><a href="#Weighted-Hoeffding-Inequality" class="headerlink" title="Weighted Hoeffding Inequality"></a>Weighted Hoeffding Inequality</h1><h2 id="条件-3"><a href="#条件-3" class="headerlink" title="条件"></a>条件</h2><blockquote>
+<p>$x_i, \cdots, x_n$ 是一族独立的随机变量，且  $a_i&lt; x_i &lt; b_i$, $\bar{X} = \frac{1}{n}(w_1x_1 + \cdots + w_nx_n)$ </p>
+</blockquote>
+<h2 id="公式-3"><a href="#公式-3" class="headerlink" title="公式"></a>公式</h2><blockquote>
+<p> $$ P(\bar{x} - E[\bar{x}]\ge t) \le exp\left( -\frac{2n^2t^2}{\sum_{i=1}^n w_i^2(b_i-a_i)^2} \right)$$  </p>
+</blockquote>
+<h2 id="直观与讨论-3"><a href="#直观与讨论-3" class="headerlink" title="直观与讨论"></a>直观与讨论</h2><p>与简单的Hoeffding 不等式类似，唯一区别在于是加权平均数。</p>
+<h1 id="Bennett’s-inequality"><a href="#Bennett’s-inequality" class="headerlink" title="Bennett’s inequality"></a>Bennett’s inequality</h1><h2 id="条件-4"><a href="#条件-4" class="headerlink" title="条件"></a>条件</h2><blockquote>
+<p>$x_i, \cdots, x_n$ 是一族独立的随机变量，且  $a_i&lt; x_i &lt; b_i$, $b_i-a_i=c_i \le C$, $\bar{X} = \frac{1}{n}( x_1 + \cdots +  x_n)$ ,<br>$\sigma^2 = \sum_{i=1}^nE[x_i^2]$, t为任意实数</p>
+</blockquote>
+<h2 id="公式-4"><a href="#公式-4" class="headerlink" title="公式"></a>公式</h2><blockquote>
+<p> $$ P(\bar{X} -E[\bar{X}] \ge t) \le exp\left( -\frac{\sigma^2}{C^2} h(\frac{Ct}{n\sigma^2})\right)$$<br>$$ h(u) = (1+u)log(1+u) - u $$</p>
+</blockquote>
+<h2 id="直观与讨论-4"><a href="#直观与讨论-4" class="headerlink" title="直观与讨论"></a>直观与讨论</h2><p> 因为利用了方差的信息，这个界更加细致。  </p>
+<h1 id="Bernstein’s-inequalities"><a href="#Bernstein’s-inequalities" class="headerlink" title="Bernstein’s inequalities"></a>Bernstein’s inequalities</h1><h2 id="条件-5"><a href="#条件-5" class="headerlink" title="条件"></a>条件</h2><blockquote>
+<p>$x_i, \cdots, x_n$ 是一族独立的随机变量，且  $a_i&lt; x_i &lt; b_i$, $b_i-a_i=c_i \le C$, $\bar{X} = \frac{1}{n}(x_1 + \cdots + c_n)$ , $\sigma^2 = \sum_{i=1}^nE[x_i^2]$, t为任意实数</p>
+</blockquote>
+<h2 id="公式-5"><a href="#公式-5" class="headerlink" title="公式"></a>公式</h2><blockquote>
+<p> $$ P(\bar{X} -E[\bar{X}] \ge t) \le exp\left( -\frac{t^2/2 }{n^2\sigma^2 +  Ctn/3} \right)$$  </p>
+</blockquote>
+<h2 id="直观与讨论-5"><a href="#直观与讨论-5" class="headerlink" title="直观与讨论"></a>直观与讨论</h2><p>将Bennett不等式中的h函数用更松的形式代换, 可以证明这个不等式。</p>
+<p>$$h(u)\ge \frac{u^2}{2+2u/3}$$</p>
+<p>在Bernstein不等式中，我们可以看到，如果方差较小， 相同n和t的时候， 不等号右侧的概率值相比hoeffding不等式要小，说明Bernstein不等式通过考虑方差信息，获得了更加精细的结果。</p>
+<h1 id="Azuma’s-inequality"><a href="#Azuma’s-inequality" class="headerlink" title="Azuma’s inequality"></a>Azuma’s inequality</h1><p>前面讨论的一些不等式都要求随机变量独立，Azuma不等式研究的随机变量序列可以有相关性</p>
+<h2 id="条件-6"><a href="#条件-6" class="headerlink" title="条件"></a>条件</h2><blockquote>
+<p>$x_i, \cdots, x_n$ 是一族鞅序列，，且  $| x_i - x{i-1} | &lt; c_i$,   t为任意实数</p>
+</blockquote>
+<p>鞅指的是满足如下两个条件的随机过程<br>$$E[|x_n|] &lt;\infty$$<br>$$E[x_{n+1}|x_1, \cdots x_n]=x_n$$</p>
+<h2 id="公式-6"><a href="#公式-6" class="headerlink" title="公式"></a>公式</h2><blockquote>
+<p> $$ P(x_N-x_0 \ge t) \le exp\left( -\frac{t^2  }{2\sum_{i=1}^Nc_i^2 } \right)$$  </p>
+</blockquote>
+<h2 id="直观与讨论-6"><a href="#直观与讨论-6" class="headerlink" title="直观与讨论"></a>直观与讨论</h2><p>如果将鞅序列拆分成鞅差序列， 即令$y_i = x_i - x_{i-1}$, 那么$y_i$满足如下两条，为鞅差序列<br>$$E[|x_n|] &lt;\infty$$<br>$$E[x_{n+1}|\mathcal{F}_n]=0$$</p>
+<p>则$x_n-x_0 = \sum_{i=1}^N y_i$Azuma不等式可以看成鞅差序列的和偏离0的概率</p>
+<h1 id="Doob’s-martingale-inequality"><a href="#Doob’s-martingale-inequality" class="headerlink" title="Doob’s martingale inequality"></a>Doob’s martingale inequality</h1><h2 id="条件-7"><a href="#条件-7" class="headerlink" title="条件"></a>条件</h2><blockquote>
+<p> $x$是上鞅，即对任意两个时刻$s&lt;t$， $x_s \le E[x_t|\mathcal{F_s}]$</p>
+</blockquote>
+<h2 id="公式-7"><a href="#公式-7" class="headerlink" title="公式"></a>公式</h2><blockquote>
+<p> $$ P(\sup_{0\le t \le T}x_t \ge C) \le  \frac{E[\max(x_T,0)]}{C}$$  </p>
+</blockquote>
+<h2 id="直观与讨论-7"><a href="#直观与讨论-7" class="headerlink" title="直观与讨论"></a>直观与讨论</h2><p>这个不等式讨论了上鞅序列在路径中的表现，即如果我们知道上鞅序列$X_t$在最后$T$时刻的表现，我们就能大概推测出在整个0到T时刻之间随机变量$x_t$大于某个值的概率。</p>
+<h1 id="整体讨论"><a href="#整体讨论" class="headerlink" title="整体讨论"></a>整体讨论</h1><p>上述讨论的公式形式比较单一，都是描述随机变量或者随机变量的和偏离其中心的概率值的大小。但是实际上我们根据上文中的结果，可以很容易的推导出其他变形形式。</p>
+<p>用Heoffding不等式举例，我们还可以有以下结果:</p>
+<ol>
+<li>当样本量为n的时候，以至少$1-\delta$的结果，我们可以有如下</li>
+</ol>
+<p>$$ E[\bar{X} ] - \bar{X} \le \sqrt{\frac{\sum_{i=1}^n(b_i-a_i)^2\ln\frac{1}{\delta }}{2n^2}}$$</p>
+<ol start="2">
+<li>同理，如果我们需要以至少$1-\delta$的概率保证差距小于$\epsilon$，则我们至少需要这么多样本(假设所有的$b_i &lt;b, \ a_i&gt;a$ )</li>
+</ol>
+<p>$$N = \frac{ (b -a )^2\ln\frac{1}{\delta }}{2\epsilon^2} $$</p>
+<p>类似这样的结论对于算法的收敛性分析和有限样本表现分析非常有用</p>
+<!-- 
+|            |                                                                                         |                                                               |                                                                                 |
+| ---------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| p          | 1-$\delta$                                                                              | $e^{-\frac{n\epsilon^2}{2\sigma^2 + \frac{14\eta\epsilon}{3}}}$ | 1-$\delta$                                                                      |
+| n          | n                                                                                       | n                                                             | $\frac{((2\sigma^2)+\frac{14\eta\epsilon}{3})\ln\frac{1}{\delta} }{\epsilon^2}$ |
+| $\epsilon$ | $\sqrt{\frac{2\sigma^2\ln\frac{2}{\delta}}{n}}+\frac{7\eta\ln\frac{2}{\delta}}{3(n-1)}$ | $\epsilon$                                                    | $\epsilon$                                                                      |
+|            |                                                                                         |                                                               |                                                                                 |
+
+
+ -->
+]]></content>
+      <tags>
+        <tag>Concentration Inequality</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>分位数回归</title>
+    <url>/2020/04/17/2/</url>
+    <content><![CDATA[<h1 id="分位数回归的直观"><a href="#分位数回归的直观" class="headerlink" title="分位数回归的直观"></a>分位数回归的直观</h1><p>给定一些样本数据 $(x_i, y_i)$，我们可以理解成 给定一个 $x_i$, 我们就有一个 $Y_i$ 的分布，$y_i$ 是一个采样出来的样本，被我们所观测。 最小二乘估计是要去拟合 $x$ 和 $mean(Y)$ 之间的关系。 而分位数回归则是要拟合某分位数。</p>
+<a id="more"></a>
+
+<p><img data-src="https://img-1253424161.cos.ap-shanghai.myqcloud.com/xsj/2019/12/1575889988287.png" alt="分位数回归的结果"></p>
+<h1 id="分位数回归的数学方法"><a href="#分位数回归的数学方法" class="headerlink" title="分位数回归的数学方法"></a>分位数回归的数学方法</h1><p>随机变量 $Y$ 的 $\tau$ 分位数 的定义是<br>$$ Q_{Y}(\tau)=F_{Y}^{-1}(\tau)=\inf\left\lbrace y:F_{Y}(y)\geq\tau\right\rbrace $$</p>
+<p>为了简单起见，我们定义如下函数</p>
+<p>$$ \rho_{\tau}(y)=y(\tau-\mathbb{I}_{(y&lt;0)}) $$</p>
+<p>考虑如下最优化问题的最优解 $u^*$</p>
+<p>$$ \underset{u}{\min}E(\rho_{\tau}(Y-u))=\underset{u}{\min}\left\lbrace(\tau-1)\int_{-\infty}^{u}(y-u)dF_{Y}(y)+\tau\int_{u}^{\infty}(y-u)dF_{Y}(y)\right\rbrace  \tag{1}$$ </p>
+<p>我们可以通过求导，令导函数等于0，反解出$u^\ast$ ， 可以看到 $F_{Y}( u^\ast)=\tau$</p>
+<p>从而，我们可以令  $u = f_w(x)$, 例如，线性情况下  $u = w\cdot x$. 从而 公式 (1)的 $min_u$ 变成 $min_w$就是分位数回归的目标函数了。</p>
+<h1 id="一些参考资料"><a href="#一些参考资料" class="headerlink" title="一些参考资料"></a>一些参考资料</h1><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><blockquote>
+<blockquote>
+<p> <a href="http://www.statsmodels.org/dev/examples/notebooks/generated/quantile_regression.html" target="_blank" rel="noopener">http://www.statsmodels.org/dev/examples/notebooks/generated/quantile_regression.html</a></p>
+</blockquote>
+</blockquote>
+<p> .</p>
+]]></content>
+      <tags>
+        <tag>分位数回归</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>我与我的小可爱</title>
     <url>/2018/02/14/1/</url>
     <content><![CDATA[<p><img data-src="https://cdn.jsdelivr.net/gh/xfdywy/blogResource@master/image/%E8%AF%8D%E4%BA%91.png" alt="词云1"></p>
@@ -500,6 +689,83 @@
 
 <p>感觉非常好。</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>&#39;wangyuehahah&#39;</title>
+    <url>/2016/03/02/1/</url>
+    <content><![CDATA[<p>###i just want to have a try</p>
+<blockquote>
+<p>hallo world</p>
+</blockquote>
+<p>this is 20160402</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>好用的软件</title>
+    <url>/2020/04/12/2/</url>
+    <content><![CDATA[<p>总结一下自己在win10系统上用到的好用的软件，每次换新系统都必装的一些软件。原则是，方方面面用的顺手。</p>
+<a id="more"></a>
+
+<p>我以后遇到，会来更新这个list的，如果有大佬有好的私房软件，欢迎在底下留言呀。</p>
+<h1 id="小众神器们"><a href="#小众神器们" class="headerlink" title="小众神器们"></a>小众神器们</h1><ul>
+<li><p>文件内容搜索     FileLocator Lite</p>
+</li>
+<li><p>文件搜索       Everything</p>
+</li>
+<li><p>快捷搜索       Listary</p>
+</li>
+<li><p>将远程ssh网盘等映射成本地  RaiDriver</p>
+</li>
+<li><p>小书匠，写markdown 神器</p>
+</li>
+<li><p>图片查看    Honey View</p>
+</li>
+<li><p>对比两个文件的diff Beyond Compare</p>
+</li>
+<li><p>压缩软件必备 Bandizip</p>
+</li>
+</ul>
+<ul>
+<li><p>好看的cmd，内置了bash命令支持 Cmder</p>
+</li>
+<li><p>视频播放器 Potplayer</p>
+</li>
+<li><p>文件多地自动备份 goodsync</p>
+</li>
+<li><p>与latex配合的很好的简单pdf阅读器 sumatra</p>
+</li>
+<li><p>截图神器 snipaste</p>
+</li>
+<li><p>连接远程服务器神器 mobaxterm</p>
+</li>
+<li><p>录屏生成gif screentogif</p>
+</li>
+<li><p>网络流量管理 fiddler</p>
+</li>
+<li><p>微博备份 稳部落</p>
+</li>
+</ul>
+<h1 id="大众常规好用"><a href="#大众常规好用" class="headerlink" title="大众常规好用"></a>大众常规好用</h1><ul>
+<li><p>文本编辑器  vscode</p>
+</li>
+<li><p>latex编辑器 texstudio</p>
+</li>
+<li><p>记笔记 onenote</p>
+</li>
+<li><p>win10 pdf标注软件  xodo</p>
+</li>
+<li><p>常规pdf阅读器  pdf-xchange</p>
+</li>
+<li><p>日程任务规划   microsoft todo</p>
+</li>
+</ul>
+<p> .</p>
+]]></content>
+      <tags>
+        <tag>软件</tag>
+        <tag>日常办公</tag>
+        <tag>工具</tag>
+      </tags>
   </entry>
   <entry>
     <title>新开一坑，读书笔记</title>
@@ -591,25 +857,6 @@
       </tags>
   </entry>
   <entry>
-    <title>python notebook</title>
-    <url>/2016/08/10/1/</url>
-    <content><![CDATA[<p>就用这个帖子记录一下自己学习python遇到的一些小细节吧</p>
-<p>#1      ndarray.swapaxes(axis1, axis2) : 交换两个轴的元素后的矩阵.</p>
-<blockquote>
-<p><a href="http://blog.csdn.net/qq403977698/article/details/47254597" target="_blank" rel="noopener">http://blog.csdn.net/qq403977698/article/details/47254597</a><br>转魔方，始终的面对着的面向下为第一维度，水平为第二维度<br>#2      [x for x in list if r.match(x)]<br><a href="http://stackoverflow.com/questions/3640359/regular-expressions-search-in-list" target="_blank" rel="noopener">http://stackoverflow.com/questions/3640359/regular-expressions-search-in-list</a></p>
-</blockquote>
-<p>#3<br>names = df.columns.tolist()</p>
-<p>names[names.index(‘two’)] = ‘new_name’</p>
-<p>df.columns = names</p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python程序人生</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>支持Python3的腾讯云 对象存储 cos python3 sdk</title>
     <url>/2018/04/09/1/</url>
     <content><![CDATA[<p>今天填了一天的坑。成果是 qcloud_cos_py3.<br>腾讯云的cos python sdk cos-python-sdk-v5 只支持python2.7， 而我的qt项目要 python3.* .</p>
@@ -627,97 +874,6 @@
         <tag>py2to3</tag>
         <tag>腾讯云cos</tag>
         <tag>qcloud_cos_py3</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>好用的软件</title>
-    <url>/2020/04/12/2/</url>
-    <content><![CDATA[<p>总结一下自己在win10系统上用到的好用的软件，每次换新系统都必装的一些软件。原则是，方方面面用的顺手。</p>
-<a id="more"></a>
-
-<p>我以后遇到，会来更新这个list的，如果有大佬有好的私房软件，欢迎在底下留言呀。</p>
-<h1 id="小众神器们"><a href="#小众神器们" class="headerlink" title="小众神器们"></a>小众神器们</h1><ul>
-<li><p>文件内容搜索     FileLocator Lite</p>
-</li>
-<li><p>文件搜索       Everything</p>
-</li>
-<li><p>快捷搜索       Listary</p>
-</li>
-<li><p>将远程ssh网盘等映射成本地  RaiDriver</p>
-</li>
-<li><p>小书匠，写markdown 神器</p>
-</li>
-<li><p>图片查看    Honey View</p>
-</li>
-<li><p>对比两个文件的diff Beyond Compare</p>
-</li>
-<li><p>压缩软件必备 Bandizip</p>
-</li>
-</ul>
-<ul>
-<li><p>好看的cmd，内置了bash命令支持 Cmder</p>
-</li>
-<li><p>视频播放器 Potplayer</p>
-</li>
-<li><p>文件多地自动备份 goodsync</p>
-</li>
-<li><p>与latex配合的很好的简单pdf阅读器 sumatra</p>
-</li>
-<li><p>截图神器 snipaste</p>
-</li>
-<li><p>连接远程服务器神器 mobaxterm</p>
-</li>
-<li><p>录屏生成gif screentogif</p>
-</li>
-<li><p>网络流量管理 fiddler</p>
-</li>
-<li><p>微博备份 稳部落</p>
-</li>
-</ul>
-<h1 id="大众常规好用"><a href="#大众常规好用" class="headerlink" title="大众常规好用"></a>大众常规好用</h1><ul>
-<li><p>文本编辑器  vscode</p>
-</li>
-<li><p>latex编辑器 texstudio</p>
-</li>
-<li><p>记笔记 onenote</p>
-</li>
-<li><p>win10 pdf标注软件  xodo</p>
-</li>
-<li><p>常规pdf阅读器  pdf-xchange</p>
-</li>
-<li><p>日程任务规划   microsoft todo</p>
-</li>
-</ul>
-<p> .</p>
-]]></content>
-      <tags>
-        <tag>软件</tag>
-        <tag>日常办公</tag>
-        <tag>工具</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>手动输入网易云音乐歌单创建hexo 音乐播放器</title>
-    <url>/2018/05/06/1/</url>
-    <content><![CDATA[<p><strong>!我终于来填坑啦！ <a href="/2020/04/12/1/">来这里看吧，</a></strong></p>
-<p>先挖个坑。欢迎点击左边的  <code>Music</code>来看看效果。也可以用这个链接<a href="https://wyue.name/music/">https://wyue.name/music/</a></p>
-<p>已经实现了的是在hexo博客上，搞一个音乐播放器。<br>播放器选的是aplayer。<br>通过输入网易云音乐的歌单id，来创建播放列表。可以手动输入歌单id。</p>
-<a id="more"></a>
-
-<p>提前感谢各位大佬给的网易云音乐api。</p>
-<p>学习到的几点：</p>
-<h2 id="javascript-http-get-请求处理"><a href="#javascript-http-get-请求处理" class="headerlink" title="javascript http get 请求处理"></a>javascript http get 请求处理</h2><h2 id="javascript-json-处理"><a href="#javascript-json-处理" class="headerlink" title="javascript json 处理"></a>javascript json 处理</h2><h2 id="javascript-function-循环等"><a href="#javascript-function-循环等" class="headerlink" title="javascript function 循环等"></a>javascript function 循环等</h2><h2 id="简单css"><a href="#简单css" class="headerlink" title="简单css"></a>简单css</h2><p>生成音乐页面的全部的code 在这里</p>
-<blockquote>
-<p><a href="https://gist.githubusercontent.com/xfdywy/e7fcaaf6f1c12975455f08478881c3cf/raw/154f07a9a853bd1b1ceaa9f6bb43983b85167fcc/music.md" target="_blank" rel="noopener">https://gist.githubusercontent.com/xfdywy/e7fcaaf6f1c12975455f08478881c3cf/raw/154f07a9a853bd1b1ceaa9f6bb43983b85167fcc/music.md</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>aplayer</tag>
-        <tag>网易云音乐api</tag>
       </tags>
   </entry>
   <entry>
@@ -823,12 +979,31 @@
         <category>hexo related</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
         <tag>自定义域名</tag>
         <tag>github page</tag>
         <tag>coding page</tag>
+        <tag>hexo</tag>
         <tag>dns</tag>
         <tag>CNAME</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python notebook</title>
+    <url>/2016/08/10/1/</url>
+    <content><![CDATA[<p>就用这个帖子记录一下自己学习python遇到的一些小细节吧</p>
+<p>#1      ndarray.swapaxes(axis1, axis2) : 交换两个轴的元素后的矩阵.</p>
+<blockquote>
+<p><a href="http://blog.csdn.net/qq403977698/article/details/47254597" target="_blank" rel="noopener">http://blog.csdn.net/qq403977698/article/details/47254597</a><br>转魔方，始终的面对着的面向下为第一维度，水平为第二维度<br>#2      [x for x in list if r.match(x)]<br><a href="http://stackoverflow.com/questions/3640359/regular-expressions-search-in-list" target="_blank" rel="noopener">http://stackoverflow.com/questions/3640359/regular-expressions-search-in-list</a></p>
+</blockquote>
+<p>#3<br>names = df.columns.tolist()</p>
+<p>names[names.index(‘two’)] = ‘new_name’</p>
+<p>df.columns = names</p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python程序人生</tag>
       </tags>
   </entry>
   <entry>
@@ -903,6 +1078,30 @@
       <tags>
         <tag>music</tag>
         <tag>hexo blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>手动输入网易云音乐歌单创建hexo 音乐播放器</title>
+    <url>/2018/05/06/1/</url>
+    <content><![CDATA[<p><strong>!我终于来填坑啦！ <a href="/2020/04/12/1/">来这里看吧，</a></strong></p>
+<p>先挖个坑。欢迎点击左边的  <code>Music</code>来看看效果。也可以用这个链接<a href="https://wyue.name/music/">https://wyue.name/music/</a></p>
+<p>已经实现了的是在hexo博客上，搞一个音乐播放器。<br>播放器选的是aplayer。<br>通过输入网易云音乐的歌单id，来创建播放列表。可以手动输入歌单id。</p>
+<a id="more"></a>
+
+<p>提前感谢各位大佬给的网易云音乐api。</p>
+<p>学习到的几点：</p>
+<h2 id="javascript-http-get-请求处理"><a href="#javascript-http-get-请求处理" class="headerlink" title="javascript http get 请求处理"></a>javascript http get 请求处理</h2><h2 id="javascript-json-处理"><a href="#javascript-json-处理" class="headerlink" title="javascript json 处理"></a>javascript json 处理</h2><h2 id="javascript-function-循环等"><a href="#javascript-function-循环等" class="headerlink" title="javascript function 循环等"></a>javascript function 循环等</h2><h2 id="简单css"><a href="#简单css" class="headerlink" title="简单css"></a>简单css</h2><p>生成音乐页面的全部的code 在这里</p>
+<blockquote>
+<p><a href="https://gist.githubusercontent.com/xfdywy/e7fcaaf6f1c12975455f08478881c3cf/raw/154f07a9a853bd1b1ceaa9f6bb43983b85167fcc/music.md" target="_blank" rel="noopener">https://gist.githubusercontent.com/xfdywy/e7fcaaf6f1c12975455f08478881c3cf/raw/154f07a9a853bd1b1ceaa9f6bb43983b85167fcc/music.md</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>aplayer</tag>
+        <tag>网易云音乐api</tag>
       </tags>
   </entry>
   <entry>
