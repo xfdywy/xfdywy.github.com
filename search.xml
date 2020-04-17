@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>c++ notebook</title>
+    <url>/2016/08/10/2/</url>
+    <content><![CDATA[<p>就用这个帖子记录一下自己学习c++遇到的一些小细节吧</p>
+<p>#1 atof </p>
+<blockquote>
+<p><a href="http://blog.csdn.net/zhaoyl03/article/details/8176387" target="_blank" rel="noopener">http://blog.csdn.net/zhaoyl03/article/details/8176387</a></p>
+</blockquote>
+<p>它将ascII字符串转换为相应的单精度浮点数，比如传入”1.234”，经过处理后就返回float类型的数1.234 。类似的还有atoi 、atol、itoa、ftoa等等。</p>
+<p>#2 随机数</p>
+<blockquote>
+<p><a href="http://www.cnblogs.com/egmkang/archive/2012/09/06/2673253.html" target="_blank" rel="noopener">http://www.cnblogs.com/egmkang/archive/2012/09/06/2673253.html</a></p>
+</blockquote>
+<p>　　标准把随机数抽象成随机数引擎和分布两部分.引擎用来产生随机数,分布产生特定分布的随机数(比如平均分布,正太分布等).</p>
+<p>　　标准提供三种常用的引擎:linear_congruential_engine,mersenne_twister_engine和subtract_with_carry_engine.第一种是线性同余算法,第二种是梅森旋转算法,第三种带进位的线性同余算法.第一种是最常用的,而且速度也是非常快的; 第二种号称是最好的伪随机数生成器;第三种没用过….</p>
+<p>　　随机数引擎接受一个整形参数当作种子,不提供的话,会使用默认值. 推荐使用random_device来产生一个随机数当作种子.(windows下爱咋整咋整,谁叫windows的random_device是调用rand_s)</p>
+]]></content>
+      <tags>
+        <tag>-c++程序人生</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Latex 写中文毕业论文</title>
     <url>/2019/03/01/1/</url>
     <content><![CDATA[<p>最近疫情在家写毕业论文，前期折腾了一下latex模版的相关事情，算是搞的比较清楚了，所以后期论文写起来也比较顺利，遇到问题也可以随时解决。现在论文也搞得差不多了，准备记录一下。</p>
@@ -88,27 +109,6 @@
       <tags>
         <tag>Latex</tag>
         <tag>中文</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>c++ notebook</title>
-    <url>/2016/08/10/2/</url>
-    <content><![CDATA[<p>就用这个帖子记录一下自己学习c++遇到的一些小细节吧</p>
-<p>#1 atof </p>
-<blockquote>
-<p><a href="http://blog.csdn.net/zhaoyl03/article/details/8176387" target="_blank" rel="noopener">http://blog.csdn.net/zhaoyl03/article/details/8176387</a></p>
-</blockquote>
-<p>它将ascII字符串转换为相应的单精度浮点数，比如传入”1.234”，经过处理后就返回float类型的数1.234 。类似的还有atoi 、atol、itoa、ftoa等等。</p>
-<p>#2 随机数</p>
-<blockquote>
-<p><a href="http://www.cnblogs.com/egmkang/archive/2012/09/06/2673253.html" target="_blank" rel="noopener">http://www.cnblogs.com/egmkang/archive/2012/09/06/2673253.html</a></p>
-</blockquote>
-<p>　　标准把随机数抽象成随机数引擎和分布两部分.引擎用来产生随机数,分布产生特定分布的随机数(比如平均分布,正太分布等).</p>
-<p>　　标准提供三种常用的引擎:linear_congruential_engine,mersenne_twister_engine和subtract_with_carry_engine.第一种是线性同余算法,第二种是梅森旋转算法,第三种带进位的线性同余算法.第一种是最常用的,而且速度也是非常快的; 第二种号称是最好的伪随机数生成器;第三种没用过….</p>
-<p>　　随机数引擎接受一个整形参数当作种子,不提供的话,会使用默认值. 推荐使用random_device来产生一个随机数当作种子.(windows下爱咋整咋整,谁叫windows的random_device是调用rand_s)</p>
-]]></content>
-      <tags>
-        <tag>-c++程序人生</tag>
       </tags>
   </entry>
   <entry>
@@ -666,6 +666,21 @@
 ]]></content>
   </entry>
   <entry>
+    <title>我与我的小可爱</title>
+    <url>/2018/02/14/1/</url>
+    <content><![CDATA[<p><img data-src="https://cdn.jsdelivr.net/gh/xfdywy/blogResource@master/image/%E8%AF%8D%E4%BA%91.png" alt="词云1"></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/xfdywy/blogResource@master/image/%E8%AF%8D%E4%BA%911.png" alt="词云"></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/xfdywy/blogResource@master/image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20180214161417.jpg" alt="微信图片_20180214161417"></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/xfdywy/blogResource@master/image/love.jpg" alt="lalal"></p>
+<h1 id="2016年10月4日"><a href="#2016年10月4日" class="headerlink" title="2016年10月4日"></a>2016年10月4日</h1><h1 id="2017年3月9日"><a href="#2017年3月9日" class="headerlink" title="2017年3月9日"></a>2017年3月9日</h1><h1 id="2018年2月14日"><a href="#2018年2月14日" class="headerlink" title="2018年2月14日"></a>2018年2月14日</h1>]]></content>
+      <categories>
+        <category>book reading</category>
+      </categories>
+      <tags>
+        <tag>-读书笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>我的第一篇博文</title>
     <url>/2016/03/01/1/</url>
     <content><![CDATA[<p>这是<strong>新的开始</strong>，我用hexo创建了第一篇文章。</p>
@@ -684,6 +699,54 @@
 </blockquote>
 <p>this is 20160402</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>新开一坑，读书笔记</title>
+    <url>/2016/07/07/1/</url>
+    <content><![CDATA[<p>就用这个帖子记录一下自己的读书笔记吧</p>
+<hr>
+<h1 id="1-《消失的地平线》2016"><a href="#1-《消失的地平线》2016" class="headerlink" title="1.《消失的地平线》2016."></a>1.《消失的地平线》2016.</h1><h2 id="内容简介"><a href="#内容简介" class="headerlink" title="内容简介"></a>内容简介</h2><blockquote>
+<ul>
+<li>香格里拉的梦，梦幻，不真实.一帮外国人，各有各的性格，“被选中”，被带到一个类似于世外桃源的地方，这里没有争吵，没有烦恼，似乎独立于这个世界而存在，让人迷醉。在这里，只用想着，活下去，心放宽，享受生活。</li>
+</ul>
+</blockquote>
+<h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><blockquote>
+<ul>
+<li>我是在去成都的一路上给读完的这本书，大概那段时间自己的心情也就跟这本书里面一样，充满虚幻的想象，充满一种浮夸，肥皂泡吧。那些和尚，那几个外国人，世外桃源般，突然降临，又突然逃离。</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>就好像，这学期开始的两个月，突然发生又突然结束的一些事情。</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>发生的突然，让我连自己也觉得不可思议。结束的突然，让我难以坦然。</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>误入世外桃源终不能长久，甚至我觉得世外桃源也终不能长久。香格里拉这种地方就像毒品，借着正常的生活带来的种种黑暗面，发自己的光，就像毒品能给空虚的人以一种病态的安慰。若不能明辨，若不能逃离，便会迷醉其中。</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>最可怕的是心态的改变，这也是一直以来，所有事情最直接影响我们的方式：不是一件事情发生了，便会改变生活，便能从根本上改变什么；而是，一件事情发生了，很快又过去了，但是下次再发生时，我们看待这件事情的方式就不同了。楞次定律说的好啊，事情发生的结果是会产生阻碍其发生的某种影响，所以一件事情并不会从根本上改变什么，但是，<strong>阻碍</strong>不是<strong>阻止</strong>啊，心态变了，视角变了，就是从根上变了。</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>恩，我就是想说，我可能在变了。</li>
+</ul>
+</blockquote>
+<h1 id="2-《月亮和六便士》"><a href="#2-《月亮和六便士》" class="headerlink" title="2.《月亮和六便士》"></a>2.《月亮和六便士》</h1><h1 id="3-《乌合之众》"><a href="#3-《乌合之众》" class="headerlink" title="3.《乌合之众》"></a>3.《乌合之众》</h1><h1 id="4-《生命，民间记忆之史铁生》"><a href="#4-《生命，民间记忆之史铁生》" class="headerlink" title="4.《生命，民间记忆之史铁生》"></a>4.《生命，民间记忆之史铁生》</h1>]]></content>
+      <categories>
+        <category>book reading</category>
+      </categories>
+      <tags>
+        <tag>-读书笔记</tag>
+      </tags>
   </entry>
   <entry>
     <title>好用的软件</title>
@@ -750,69 +813,6 @@
         <tag>软件</tag>
         <tag>日常办公</tag>
         <tag>工具</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我与我的小可爱</title>
-    <url>/2018/02/14/1/</url>
-    <content><![CDATA[<p><img data-src="https://cdn.jsdelivr.net/gh/xfdywy/blogResource@master/image/%E8%AF%8D%E4%BA%91.png" alt="词云1"></p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/xfdywy/blogResource@master/image/%E8%AF%8D%E4%BA%911.png" alt="词云"></p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/xfdywy/blogResource@master/image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20180214161417.jpg" alt="微信图片_20180214161417"></p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/xfdywy/blogResource@master/image/love.jpg" alt="lalal"></p>
-<h1 id="2016年10月4日"><a href="#2016年10月4日" class="headerlink" title="2016年10月4日"></a>2016年10月4日</h1><h1 id="2017年3月9日"><a href="#2017年3月9日" class="headerlink" title="2017年3月9日"></a>2017年3月9日</h1><h1 id="2018年2月14日"><a href="#2018年2月14日" class="headerlink" title="2018年2月14日"></a>2018年2月14日</h1>]]></content>
-      <categories>
-        <category>book reading</category>
-      </categories>
-      <tags>
-        <tag>-读书笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>新开一坑，读书笔记</title>
-    <url>/2016/07/07/1/</url>
-    <content><![CDATA[<p>就用这个帖子记录一下自己的读书笔记吧</p>
-<hr>
-<h1 id="1-《消失的地平线》2016"><a href="#1-《消失的地平线》2016" class="headerlink" title="1.《消失的地平线》2016."></a>1.《消失的地平线》2016.</h1><h2 id="内容简介"><a href="#内容简介" class="headerlink" title="内容简介"></a>内容简介</h2><blockquote>
-<ul>
-<li>香格里拉的梦，梦幻，不真实.一帮外国人，各有各的性格，“被选中”，被带到一个类似于世外桃源的地方，这里没有争吵，没有烦恼，似乎独立于这个世界而存在，让人迷醉。在这里，只用想着，活下去，心放宽，享受生活。</li>
-</ul>
-</blockquote>
-<h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><blockquote>
-<ul>
-<li>我是在去成都的一路上给读完的这本书，大概那段时间自己的心情也就跟这本书里面一样，充满虚幻的想象，充满一种浮夸，肥皂泡吧。那些和尚，那几个外国人，世外桃源般，突然降临，又突然逃离。</li>
-</ul>
-</blockquote>
-<blockquote>
-<ul>
-<li>就好像，这学期开始的两个月，突然发生又突然结束的一些事情。</li>
-</ul>
-</blockquote>
-<blockquote>
-<ul>
-<li>发生的突然，让我连自己也觉得不可思议。结束的突然，让我难以坦然。</li>
-</ul>
-</blockquote>
-<blockquote>
-<ul>
-<li>误入世外桃源终不能长久，甚至我觉得世外桃源也终不能长久。香格里拉这种地方就像毒品，借着正常的生活带来的种种黑暗面，发自己的光，就像毒品能给空虚的人以一种病态的安慰。若不能明辨，若不能逃离，便会迷醉其中。</li>
-</ul>
-</blockquote>
-<blockquote>
-<ul>
-<li>最可怕的是心态的改变，这也是一直以来，所有事情最直接影响我们的方式：不是一件事情发生了，便会改变生活，便能从根本上改变什么；而是，一件事情发生了，很快又过去了，但是下次再发生时，我们看待这件事情的方式就不同了。楞次定律说的好啊，事情发生的结果是会产生阻碍其发生的某种影响，所以一件事情并不会从根本上改变什么，但是，<strong>阻碍</strong>不是<strong>阻止</strong>啊，心态变了，视角变了，就是从根上变了。</li>
-</ul>
-</blockquote>
-<blockquote>
-<ul>
-<li>恩，我就是想说，我可能在变了。</li>
-</ul>
-</blockquote>
-<h1 id="2-《月亮和六便士》"><a href="#2-《月亮和六便士》" class="headerlink" title="2.《月亮和六便士》"></a>2.《月亮和六便士》</h1><h1 id="3-《乌合之众》"><a href="#3-《乌合之众》" class="headerlink" title="3.《乌合之众》"></a>3.《乌合之众》</h1><h1 id="4-《生命，民间记忆之史铁生》"><a href="#4-《生命，民间记忆之史铁生》" class="headerlink" title="4.《生命，民间记忆之史铁生》"></a>4.《生命，民间记忆之史铁生》</h1>]]></content>
-      <categories>
-        <category>book reading</category>
-      </categories>
-      <tags>
-        <tag>-读书笔记</tag>
       </tags>
   </entry>
   <entry>
