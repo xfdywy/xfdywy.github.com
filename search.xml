@@ -609,6 +609,9 @@
 
  -->
 ]]></content>
+      <categories>
+        <category>math</category>
+      </categories>
       <tags>
         <tag>Concentration Inequality</tag>
       </tags>
@@ -634,6 +637,9 @@
 </blockquote>
 <p> .</p>
 ]]></content>
+      <categories>
+        <category>math</category>
+      </categories>
       <tags>
         <tag>分位数回归</tag>
       </tags>
@@ -761,6 +767,9 @@
 </ul>
 <p> .</p>
 ]]></content>
+      <categories>
+        <category>others</category>
+      </categories>
       <tags>
         <tag>软件</tag>
         <tag>日常办公</tag>
@@ -1099,6 +1108,9 @@
 </blockquote>
 <p>.</p>
 ]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
       <tags>
         <tag>music</tag>
         <tag>hexo blog</tag>
