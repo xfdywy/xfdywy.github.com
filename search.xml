@@ -24,13 +24,13 @@
   <entry>
     <title>Latex 写中文毕业论文</title>
     <url>/2019/03/01/1/</url>
-    <content><![CDATA[<p>最近疫情在家写毕业论文，前期折腾了一下latex模版的相关事情，算是搞的比较清楚了，所以后期论文写起来也比较顺利，遇到问题也可以随时解决。现在论文也搞得差不多了，准备记录一下。</p>
+    <content><![CDATA[<p>最近疫情在家写毕业论文，前期折腾了一下latex模板的相关事情，算是搞的比较清楚了，所以后期论文写起来也比较顺利，遇到问题也可以随时解决。现在论文也搞得差不多了，准备记录一下。</p>
 <a id="more"></a>
 
 <p>主要分成下面几个部分来总结一下latex写中文毕业论文的相关问题</p>
 <ol>
 <li>latex安装与编辑器的使用</li>
-<li>模版与编译器</li>
+<li>模板与编译器</li>
 <li>论文中会遇到的一些问题及解决办法</li>
 </ol>
 <h1 id="latex安装与编辑器的使用"><a href="#latex安装与编辑器的使用" class="headerlink" title="latex安装与编辑器的使用"></a>latex安装与编辑器的使用</h1><h2 id="下载与安装"><a href="#下载与安装" class="headerlink" title="下载与安装"></a>下载与安装</h2><p>肯定有很多人 <del>（包括我自己）</del>还在使用甚至还在推荐别人使用CTeX套装，注意我的用词不要引起歧义哈。我说的这个ctex套装指的是那个下载下来安装好就又有latex可以用，又帮你按了一个winedit的那个套装，一般是在下面这个网址下载的</p>
@@ -55,14 +55,14 @@
 </blockquote>
 <h2 id="写论文用到的编辑器"><a href="#写论文用到的编辑器" class="headerlink" title="写论文用到的编辑器"></a>写论文用到的编辑器</h2><p>这个话题有点引战。。我就说我咋写的吧，我本人主要用texstudio，偶尔用vscode+latex workshop插件。</p>
 <p>texstudio官网下载就好，<a href="http://www.texstudio.org/" target="_blank" rel="noopener">http://www.texstudio.org/</a> ， 简单易用，几乎0配置，界面也友好。</p>
-<h1 id="模版与编译器"><a href="#模版与编译器" class="headerlink" title="模版与编译器"></a>模版与编译器</h1><p>我是北京交通大学的，我们学校没有官方latex模版，但是有大佬们做了一个非官方的，还是与word版本有些不同，我自己又改了改，终于算是几乎一模一样了。</p>
+<h1 id="模板与编译器"><a href="#模板与编译器" class="headerlink" title="模板与编译器"></a>模板与编译器</h1><p>我是北京交通大学的，我们学校没有官方latex模板，但是有大佬们做了一个非官方的，还是与word版本有些不同，我自己又改了改，终于算是几乎一模一样了。</p>
 <p>开源在这里，有需要的可以自取</p>
 <blockquote>
 <p><a href="https://github.com/xfdywy/bjtu-thesis-templete" target="_blank" rel="noopener">https://github.com/xfdywy/bjtu-thesis-templete</a></p>
 </blockquote>
 <p>如果发现问题可以提issue，或者评论。</p>
-<p>模版基本就是一个.cls文件，在里面定义了论文的各个章节模块的格式。</p>
-<p>这个模版需要用xelatex进行编译，别忘了在编辑器里面把编译工具换成xelatex，texstudio默认的话好像是pdflatex。 </p>
+<p>模板基本就是一个.cls文件，在里面定义了论文的各个章节模块的格式。</p>
+<p>这个模板需要用xelatex进行编译，别忘了在编辑器里面把编译工具换成xelatex，texstudio默认的话好像是pdflatex。 </p>
 <p>.</p>
 <h1 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h1><h2 id="xelatex在windows-10系统上（至少在win10上）太慢了"><a href="#xelatex在windows-10系统上（至少在win10上）太慢了" class="headerlink" title="xelatex在windows 10系统上（至少在win10上）太慢了"></a>xelatex在windows 10系统上（至少在win10上）太慢了</h2><p>解决方法：在安装目录下找到xelatex.exe，就刚刚添加到Path里面的那个文件夹下面，然后</p>
 <ol>
@@ -96,7 +96,7 @@
 <h2 id="定理，定义，引理等"><a href="#定理，定义，引理等" class="headerlink" title="定理，定义，引理等"></a>定理，定义，引理等</h2><p>如下， 语法解释大概是这样</p>
 <p>\newtheorem{正文要用的环境名}{pdf上显示的名称}[按照谁编号]</p>
 <figure class="highlight tex"><table><tr><td class="code"><pre><span class="line"><span class="tag">\<span class="name">newtheorem</span><span class="string">&#123;theorem&#125;</span><span class="string">&#123;定理&#125;</span><span class="string">[section]</span></span></span><br><span class="line"><span class="tag">\<span class="name">newtheorem</span><span class="string">&#123;lemma&#125;</span><span class="string">&#123;引理&#125;</span><span class="string">[theorem]</span></span></span><br><span class="line"><span class="tag">\<span class="name">newtheorem</span><span class="string">&#123;corollary&#125;</span><span class="string">&#123;推论&#125;</span></span> [theorem]</span><br><span class="line"><span class="tag">\<span class="name">newtheorem</span><span class="string">&#123;assumption&#125;</span><span class="string">&#123;假设&#125;</span><span class="string">[chapter]</span></span></span><br></pre></td></tr></table></figure>
-<h2 id="模版中的黑科技-（ugly-trick）"><a href="#模版中的黑科技-（ugly-trick）" class="headerlink" title="模版中的黑科技 （ugly trick）"></a>模版中的黑科技 <del>（ugly trick）</del></h2><p> \usepackage{fontspec}<br> \newfontfamily\myfont{times.ttf}</p>
+<h2 id="模板中的黑科技-（ugly-trick）"><a href="#模板中的黑科技-（ugly-trick）" class="headerlink" title="模板中的黑科技 （ugly trick）"></a>模板中的黑科技 <del>（ugly trick）</del></h2><p> \usepackage{fontspec}<br> \newfontfamily\myfont{times.ttf}</p>
 <p> 这个是为了调整因为字体到Times New Roman的</p>
 <p> 第二行是说我们以后可以用{\myfont ABC}这样的语法把ABC强行设成Times New Roman字体</p>
 <p> 需要电脑中有times.ttf这个文件，并且在系统路径中了。如果没有这个文件需要先下载，如果不在系统路径中，这可以把times.ttf文件复制一份放到latex项目的文件夹下。不然会提示找不到，报错。</p>
