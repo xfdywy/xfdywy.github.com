@@ -1,27 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>c++ notebook</title>
-    <url>/2016/08/10/2/</url>
-    <content><![CDATA[<p>就用这个帖子记录一下自己学习c++遇到的一些小细节吧</p>
-<p>#1 atof </p>
-<blockquote>
-<p><a href="http://blog.csdn.net/zhaoyl03/article/details/8176387" target="_blank" rel="noopener">http://blog.csdn.net/zhaoyl03/article/details/8176387</a></p>
-</blockquote>
-<p>它将ascII字符串转换为相应的单精度浮点数，比如传入”1.234”，经过处理后就返回float类型的数1.234 。类似的还有atoi 、atol、itoa、ftoa等等。</p>
-<p>#2 随机数</p>
-<blockquote>
-<p><a href="http://www.cnblogs.com/egmkang/archive/2012/09/06/2673253.html" target="_blank" rel="noopener">http://www.cnblogs.com/egmkang/archive/2012/09/06/2673253.html</a></p>
-</blockquote>
-<p>　　标准把随机数抽象成随机数引擎和分布两部分.引擎用来产生随机数,分布产生特定分布的随机数(比如平均分布,正太分布等).</p>
-<p>　　标准提供三种常用的引擎:linear_congruential_engine,mersenne_twister_engine和subtract_with_carry_engine.第一种是线性同余算法,第二种是梅森旋转算法,第三种带进位的线性同余算法.第一种是最常用的,而且速度也是非常快的; 第二种号称是最好的伪随机数生成器;第三种没用过….</p>
-<p>　　随机数引擎接受一个整形参数当作种子,不提供的话,会使用默认值. 推荐使用random_device来产生一个随机数当作种子.(windows下爱咋整咋整,谁叫windows的random_device是调用rand_s)</p>
-]]></content>
-      <tags>
-        <tag>-c++程序人生</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Latex 写中文毕业论文</title>
     <url>/2019/03/01/1/</url>
     <content><![CDATA[<p>最近疫情在家写毕业论文，前期折腾了一下latex模板的相关事情，算是搞的比较清楚了，所以后期论文写起来也比较顺利，遇到问题也可以随时解决。现在论文也搞得差不多了，准备记录一下。</p>
@@ -112,31 +91,30 @@
       </tags>
   </entry>
   <entry>
+    <title>c++ notebook</title>
+    <url>/2016/08/10/2/</url>
+    <content><![CDATA[<p>就用这个帖子记录一下自己学习c++遇到的一些小细节吧</p>
+<p>#1 atof </p>
+<blockquote>
+<p><a href="http://blog.csdn.net/zhaoyl03/article/details/8176387" target="_blank" rel="noopener">http://blog.csdn.net/zhaoyl03/article/details/8176387</a></p>
+</blockquote>
+<p>它将ascII字符串转换为相应的单精度浮点数，比如传入”1.234”，经过处理后就返回float类型的数1.234 。类似的还有atoi 、atol、itoa、ftoa等等。</p>
+<p>#2 随机数</p>
+<blockquote>
+<p><a href="http://www.cnblogs.com/egmkang/archive/2012/09/06/2673253.html" target="_blank" rel="noopener">http://www.cnblogs.com/egmkang/archive/2012/09/06/2673253.html</a></p>
+</blockquote>
+<p>　　标准把随机数抽象成随机数引擎和分布两部分.引擎用来产生随机数,分布产生特定分布的随机数(比如平均分布,正太分布等).</p>
+<p>　　标准提供三种常用的引擎:linear_congruential_engine,mersenne_twister_engine和subtract_with_carry_engine.第一种是线性同余算法,第二种是梅森旋转算法,第三种带进位的线性同余算法.第一种是最常用的,而且速度也是非常快的; 第二种号称是最好的伪随机数生成器;第三种没用过….</p>
+<p>　　随机数引擎接受一个整形参数当作种子,不提供的话,会使用默认值. 推荐使用random_device来产生一个随机数当作种子.(windows下爱咋整咋整,谁叫windows的random_device是调用rand_s)</p>
+]]></content>
+      <tags>
+        <tag>-c++程序人生</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>linux/git</title>
     <url>/2018/03/29/1/</url>
     <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>vnc 连接服务器</title>
-    <url>/2018/04/23/1/</url>
-    <content><![CDATA[<p>vnc 连接服务器 使用 Xfce desktop tab 键不能自动补全<br>这是因为tab键被系统默认为是 switch window的快捷键了，修改了就好了</p>
-<a id="more"></a>
-
-<blockquote>
-<p>Application Menu &gt; Settings &gt; Window Manager<br>选择 Keyboard 标签 清除 Switch<br>window  的快捷键设置</p>
-</blockquote>
-<p>vnc 连接服务器 使用xfce desktop  系统时间，桌面切换等图标没有靠右，类似于windows右下键的时间状态栏等，看起来很难受。设置方法为：</p>
-<blockquote>
-<p>面板空白处右击 &gt; panel &gt; panel preferences &gt; items<br>点右边的加号，新建一个separator（分隔符），选中新建的separator，用上下按钮调整位置，分隔符后面的都靠右<br>双击 separator，保证 设置成expand<br>完成， 最终设置大概是这样<br><img data-src="https://img-1253424161.cos.ap-shanghai.myqcloud.com/xsj/2018/4/1523849612319.jpg" alt="vnc panel"></p>
-</blockquote>
-]]></content>
-      <tags>
-        <tag>vnc</tag>
-        <tag>tab</tag>
-        <tag>xfce</tag>
-        <tag>自动补全</tag>
-        <tag>状态栏</tag>
-      </tags>
   </entry>
   <entry>
     <title>折腾linux服务器</title>
@@ -253,6 +231,28 @@
       </tags>
   </entry>
   <entry>
+    <title>vnc 连接服务器</title>
+    <url>/2018/04/23/1/</url>
+    <content><![CDATA[<p>vnc 连接服务器 使用 Xfce desktop tab 键不能自动补全<br>这是因为tab键被系统默认为是 switch window的快捷键了，修改了就好了</p>
+<a id="more"></a>
+
+<blockquote>
+<p>Application Menu &gt; Settings &gt; Window Manager<br>选择 Keyboard 标签 清除 Switch<br>window  的快捷键设置</p>
+</blockquote>
+<p>vnc 连接服务器 使用xfce desktop  系统时间，桌面切换等图标没有靠右，类似于windows右下键的时间状态栏等，看起来很难受。设置方法为：</p>
+<blockquote>
+<p>面板空白处右击 &gt; panel &gt; panel preferences &gt; items<br>点右边的加号，新建一个separator（分隔符），选中新建的separator，用上下按钮调整位置，分隔符后面的都靠右<br>双击 separator，保证 设置成expand<br>完成， 最终设置大概是这样<br><img data-src="https://img-1253424161.cos.ap-shanghai.myqcloud.com/xsj/2018/4/1523849612319.jpg" alt="vnc panel"></p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>vnc</tag>
+        <tag>tab</tag>
+        <tag>xfce</tag>
+        <tag>自动补全</tag>
+        <tag>状态栏</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>redhat6.2相关配置（yum，r，rstudio，ipythonnotebook）</title>
     <url>/2016/04/01/1/</url>
     <content><![CDATA[<p>菜鸟历经多次失败，多次尝试，百度了n次，谷歌了n次之后，终于搞定了一系列的配置。太浪费时间了。。。必须记录下载，以后就方便了。</p>
@@ -326,6 +326,28 @@
       </tags>
   </entry>
   <entry>
+    <title>查看linux文件大小等文件相关操作</title>
+    <url>/2018/04/24/1/</url>
+    <content><![CDATA[<a id="more"></a>
+
+<p>查看各个“盘”使用大小，总大小等</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">df -h</span><br></pre></td></tr></table></figure>
+<p>这里， -h 表示用k，m，g等单位显示大小信息，方便查看<br>查看文件夹已使用大小</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">du -h --max-depth=1</span><br></pre></td></tr></table></figure>
+<p>这里， -h 同上， –max-depth 表示显示目录的层级最深是多少层</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ls</span><br><span class="line">ll</span><br></pre></td></tr></table></figure>
+<p>查看当前目录下的文件和文件夹，及相关信息</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cp file dir</span><br><span class="line">\cp -f file dir</span><br><span class="line"></span><br><span class="line">cp -r dir dir</span><br><span class="line">\cp -rf dir dir</span><br></pre></td></tr></table></figure>
+<p>如果需要覆盖目标文件夹里面的文件，并且没有提示，需要用第二种方法，否则哪怕加了<code>-f</code> 系统也会提示是否覆盖。这是因为系统一般都会配置别名，你输入的是<code>cp</code>,但是实际上执行的是<code>cp -i</code> 所以无论如何也会有覆盖提示了。<br>如果需要复制整个文件夹及里面的文件，需要用 <code>-r</code>,同理，如果要强制覆盖，也需要在cp前面加斜杠。</p>
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>服务器升级记录</title>
     <url>/2018/04/25/1/</url>
     <content><![CDATA[<p> 最近学校的服务器被信息中心检测出来有很多高危漏洞，给了个通知限期整改。<br> 主要修改了<br> openssh<br> vnc<br> apache<br> mysql<br> 记录如下：</p>
@@ -376,33 +398,11 @@
         <category>linux</category>
       </categories>
       <tags>
-        <tag>vnc</tag>
         <tag>linux</tag>
+        <tag>vnc</tag>
         <tag>openssh</tag>
         <tag>mysql</tag>
         <tag>apache httpd</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>查看linux文件大小等文件相关操作</title>
-    <url>/2018/04/24/1/</url>
-    <content><![CDATA[<a id="more"></a>
-
-<p>查看各个“盘”使用大小，总大小等</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">df -h</span><br></pre></td></tr></table></figure>
-<p>这里， -h 表示用k，m，g等单位显示大小信息，方便查看<br>查看文件夹已使用大小</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">du -h --max-depth=1</span><br></pre></td></tr></table></figure>
-<p>这里， -h 同上， –max-depth 表示显示目录的层级最深是多少层</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ls</span><br><span class="line">ll</span><br></pre></td></tr></table></figure>
-<p>查看当前目录下的文件和文件夹，及相关信息</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cp file dir</span><br><span class="line">\cp -f file dir</span><br><span class="line"></span><br><span class="line">cp -r dir dir</span><br><span class="line">\cp -rf dir dir</span><br></pre></td></tr></table></figure>
-<p>如果需要覆盖目标文件夹里面的文件，并且没有提示，需要用第二种方法，否则哪怕加了<code>-f</code> 系统也会提示是否覆盖。这是因为系统一般都会配置别名，你输入的是<code>cp</code>,但是实际上执行的是<code>cp -i</code> 所以无论如何也会有覆盖提示了。<br>如果需要复制整个文件夹及里面的文件，需要用 <code>-r</code>,同理，如果要强制覆盖，也需要在cp前面加斜杠。</p>
-]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
       </tags>
   </entry>
   <entry>
@@ -438,6 +438,34 @@
       </categories>
       <tags>
         <tag>Concentration Inequality</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>分位数回归</title>
+    <url>/2020/04/17/2/</url>
+    <content><![CDATA[<h1 id="分位数回归的直观"><a href="#分位数回归的直观" class="headerlink" title="分位数回归的直观"></a>分位数回归的直观</h1><p>给定一些样本数据 $(x_i, y_i)$，我们可以理解成 给定一个 $x_i$, 我们就有一个 $Y_i$ 的分布，$y_i$ 是一个采样出来的样本，被我们所观测。 最小二乘估计是要去拟合 $x$ 和 $mean(Y)$ 之间的关系。 而分位数回归则是要拟合某分位数。</p>
+<a id="more"></a>
+
+<p><img data-src="https://img-1253424161.cos.ap-shanghai.myqcloud.com/xsj/2019/12/1575889988287.png" alt="分位数回归的结果"></p>
+<h1 id="分位数回归的数学方法"><a href="#分位数回归的数学方法" class="headerlink" title="分位数回归的数学方法"></a>分位数回归的数学方法</h1><p>随机变量 $Y$ 的 $\tau$ 分位数 的定义是<br>$$ Q_{Y}(\tau)=F_{Y}^{-1}(\tau)=\inf\left\lbrace y:F_{Y}(y)\geq\tau\right\rbrace $$</p>
+<p>为了简单起见，我们定义如下函数</p>
+<p>$$ \rho_{\tau}(y)=y(\tau-\mathbb{I}_{(y&lt;0)}) $$</p>
+<p>考虑如下最优化问题的最优解 $u^*$</p>
+<p>$$ \underset{u}{\min}E(\rho_{\tau}(Y-u))=\underset{u}{\min}\left\lbrace(\tau-1)\int_{-\infty}^{u}(y-u)dF_{Y}(y)+\tau\int_{u}^{\infty}(y-u)dF_{Y}(y)\right\rbrace  \tag{1}$$ </p>
+<p>我们可以通过求导，令导函数等于0，反解出$u^\ast$ ， 可以看到 $F_{Y}( u^\ast)=\tau$</p>
+<p>从而，我们可以令  $u = f_w(x)$, 例如，线性情况下  $u = w\cdot x$. 从而 公式 (1)的 $min_u$ 变成 $min_w$就是分位数回归的目标函数了。</p>
+<h1 id="一些参考资料"><a href="#一些参考资料" class="headerlink" title="一些参考资料"></a>一些参考资料</h1><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><blockquote>
+<blockquote>
+<p> <a href="http://www.statsmodels.org/dev/examples/notebooks/generated/quantile_regression.html" target="_blank" rel="noopener">http://www.statsmodels.org/dev/examples/notebooks/generated/quantile_regression.html</a></p>
+</blockquote>
+</blockquote>
+<p> .</p>
+]]></content>
+      <categories>
+        <category>math</category>
+      </categories>
+      <tags>
+        <tag>分位数回归</tag>
       </tags>
   </entry>
   <entry>
@@ -617,34 +645,6 @@
       </tags>
   </entry>
   <entry>
-    <title>分位数回归</title>
-    <url>/2020/04/17/2/</url>
-    <content><![CDATA[<h1 id="分位数回归的直观"><a href="#分位数回归的直观" class="headerlink" title="分位数回归的直观"></a>分位数回归的直观</h1><p>给定一些样本数据 $(x_i, y_i)$，我们可以理解成 给定一个 $x_i$, 我们就有一个 $Y_i$ 的分布，$y_i$ 是一个采样出来的样本，被我们所观测。 最小二乘估计是要去拟合 $x$ 和 $mean(Y)$ 之间的关系。 而分位数回归则是要拟合某分位数。</p>
-<a id="more"></a>
-
-<p><img data-src="https://img-1253424161.cos.ap-shanghai.myqcloud.com/xsj/2019/12/1575889988287.png" alt="分位数回归的结果"></p>
-<h1 id="分位数回归的数学方法"><a href="#分位数回归的数学方法" class="headerlink" title="分位数回归的数学方法"></a>分位数回归的数学方法</h1><p>随机变量 $Y$ 的 $\tau$ 分位数 的定义是<br>$$ Q_{Y}(\tau)=F_{Y}^{-1}(\tau)=\inf\left\lbrace y:F_{Y}(y)\geq\tau\right\rbrace $$</p>
-<p>为了简单起见，我们定义如下函数</p>
-<p>$$ \rho_{\tau}(y)=y(\tau-\mathbb{I}_{(y&lt;0)}) $$</p>
-<p>考虑如下最优化问题的最优解 $u^*$</p>
-<p>$$ \underset{u}{\min}E(\rho_{\tau}(Y-u))=\underset{u}{\min}\left\lbrace(\tau-1)\int_{-\infty}^{u}(y-u)dF_{Y}(y)+\tau\int_{u}^{\infty}(y-u)dF_{Y}(y)\right\rbrace  \tag{1}$$ </p>
-<p>我们可以通过求导，令导函数等于0，反解出$u^\ast$ ， 可以看到 $F_{Y}( u^\ast)=\tau$</p>
-<p>从而，我们可以令  $u = f_w(x)$, 例如，线性情况下  $u = w\cdot x$. 从而 公式 (1)的 $min_u$ 变成 $min_w$就是分位数回归的目标函数了。</p>
-<h1 id="一些参考资料"><a href="#一些参考资料" class="headerlink" title="一些参考资料"></a>一些参考资料</h1><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><blockquote>
-<blockquote>
-<p> <a href="http://www.statsmodels.org/dev/examples/notebooks/generated/quantile_regression.html" target="_blank" rel="noopener">http://www.statsmodels.org/dev/examples/notebooks/generated/quantile_regression.html</a></p>
-</blockquote>
-</blockquote>
-<p> .</p>
-]]></content>
-      <categories>
-        <category>math</category>
-      </categories>
-      <tags>
-        <tag>分位数回归</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>连续时间离散状态马氏链的转移概率矩阵与转移速率矩阵</title>
     <url>/2020/04/09/1/</url>
     <content><![CDATA[]]></content>
@@ -687,6 +687,16 @@
       </tags>
   </entry>
   <entry>
+    <title>我的第一篇博文</title>
+    <url>/2016/03/01/1/</url>
+    <content><![CDATA[<p>这是<strong>新的开始</strong>，我用hexo创建了第一篇文章。</p>
+<p>通过下面的命令，就可以创建新文章</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new 新的开始</span><br></pre></td></tr></table></figure>
+
+<p>感觉非常好。</p>
+]]></content>
+  </entry>
+  <entry>
     <title>&#39;wangyuehahah&#39;</title>
     <url>/2016/03/02/1/</url>
     <content><![CDATA[<p>###i just want to have a try</p>
@@ -695,6 +705,54 @@
 </blockquote>
 <p>this is 20160402</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>新开一坑，读书笔记</title>
+    <url>/2016/07/07/1/</url>
+    <content><![CDATA[<p>就用这个帖子记录一下自己的读书笔记吧</p>
+<hr>
+<h1 id="1-《消失的地平线》2016"><a href="#1-《消失的地平线》2016" class="headerlink" title="1.《消失的地平线》2016."></a>1.《消失的地平线》2016.</h1><h2 id="内容简介"><a href="#内容简介" class="headerlink" title="内容简介"></a>内容简介</h2><blockquote>
+<ul>
+<li>香格里拉的梦，梦幻，不真实.一帮外国人，各有各的性格，“被选中”，被带到一个类似于世外桃源的地方，这里没有争吵，没有烦恼，似乎独立于这个世界而存在，让人迷醉。在这里，只用想着，活下去，心放宽，享受生活。</li>
+</ul>
+</blockquote>
+<h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><blockquote>
+<ul>
+<li>我是在去成都的一路上给读完的这本书，大概那段时间自己的心情也就跟这本书里面一样，充满虚幻的想象，充满一种浮夸，肥皂泡吧。那些和尚，那几个外国人，世外桃源般，突然降临，又突然逃离。</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>就好像，这学期开始的两个月，突然发生又突然结束的一些事情。</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>发生的突然，让我连自己也觉得不可思议。结束的突然，让我难以坦然。</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>误入世外桃源终不能长久，甚至我觉得世外桃源也终不能长久。香格里拉这种地方就像毒品，借着正常的生活带来的种种黑暗面，发自己的光，就像毒品能给空虚的人以一种病态的安慰。若不能明辨，若不能逃离，便会迷醉其中。</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>最可怕的是心态的改变，这也是一直以来，所有事情最直接影响我们的方式：不是一件事情发生了，便会改变生活，便能从根本上改变什么；而是，一件事情发生了，很快又过去了，但是下次再发生时，我们看待这件事情的方式就不同了。楞次定律说的好啊，事情发生的结果是会产生阻碍其发生的某种影响，所以一件事情并不会从根本上改变什么，但是，<strong>阻碍</strong>不是<strong>阻止</strong>啊，心态变了，视角变了，就是从根上变了。</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>恩，我就是想说，我可能在变了。</li>
+</ul>
+</blockquote>
+<h1 id="2-《月亮和六便士》"><a href="#2-《月亮和六便士》" class="headerlink" title="2.《月亮和六便士》"></a>2.《月亮和六便士》</h1><h1 id="3-《乌合之众》"><a href="#3-《乌合之众》" class="headerlink" title="3.《乌合之众》"></a>3.《乌合之众》</h1><h1 id="4-《生命，民间记忆之史铁生》"><a href="#4-《生命，民间记忆之史铁生》" class="headerlink" title="4.《生命，民间记忆之史铁生》"></a>4.《生命，民间记忆之史铁生》</h1>]]></content>
+      <categories>
+        <category>book reading</category>
+      </categories>
+      <tags>
+        <tag>-读书笔记</tag>
+      </tags>
   </entry>
   <entry>
     <title>好用的软件</title>
@@ -764,54 +822,6 @@
         <tag>软件</tag>
         <tag>日常办公</tag>
         <tag>工具</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>新开一坑，读书笔记</title>
-    <url>/2016/07/07/1/</url>
-    <content><![CDATA[<p>就用这个帖子记录一下自己的读书笔记吧</p>
-<hr>
-<h1 id="1-《消失的地平线》2016"><a href="#1-《消失的地平线》2016" class="headerlink" title="1.《消失的地平线》2016."></a>1.《消失的地平线》2016.</h1><h2 id="内容简介"><a href="#内容简介" class="headerlink" title="内容简介"></a>内容简介</h2><blockquote>
-<ul>
-<li>香格里拉的梦，梦幻，不真实.一帮外国人，各有各的性格，“被选中”，被带到一个类似于世外桃源的地方，这里没有争吵，没有烦恼，似乎独立于这个世界而存在，让人迷醉。在这里，只用想着，活下去，心放宽，享受生活。</li>
-</ul>
-</blockquote>
-<h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><blockquote>
-<ul>
-<li>我是在去成都的一路上给读完的这本书，大概那段时间自己的心情也就跟这本书里面一样，充满虚幻的想象，充满一种浮夸，肥皂泡吧。那些和尚，那几个外国人，世外桃源般，突然降临，又突然逃离。</li>
-</ul>
-</blockquote>
-<blockquote>
-<ul>
-<li>就好像，这学期开始的两个月，突然发生又突然结束的一些事情。</li>
-</ul>
-</blockquote>
-<blockquote>
-<ul>
-<li>发生的突然，让我连自己也觉得不可思议。结束的突然，让我难以坦然。</li>
-</ul>
-</blockquote>
-<blockquote>
-<ul>
-<li>误入世外桃源终不能长久，甚至我觉得世外桃源也终不能长久。香格里拉这种地方就像毒品，借着正常的生活带来的种种黑暗面，发自己的光，就像毒品能给空虚的人以一种病态的安慰。若不能明辨，若不能逃离，便会迷醉其中。</li>
-</ul>
-</blockquote>
-<blockquote>
-<ul>
-<li>最可怕的是心态的改变，这也是一直以来，所有事情最直接影响我们的方式：不是一件事情发生了，便会改变生活，便能从根本上改变什么；而是，一件事情发生了，很快又过去了，但是下次再发生时，我们看待这件事情的方式就不同了。楞次定律说的好啊，事情发生的结果是会产生阻碍其发生的某种影响，所以一件事情并不会从根本上改变什么，但是，<strong>阻碍</strong>不是<strong>阻止</strong>啊，心态变了，视角变了，就是从根上变了。</li>
-</ul>
-</blockquote>
-<blockquote>
-<ul>
-<li>恩，我就是想说，我可能在变了。</li>
-</ul>
-</blockquote>
-<h1 id="2-《月亮和六便士》"><a href="#2-《月亮和六便士》" class="headerlink" title="2.《月亮和六便士》"></a>2.《月亮和六便士》</h1><h1 id="3-《乌合之众》"><a href="#3-《乌合之众》" class="headerlink" title="3.《乌合之众》"></a>3.《乌合之众》</h1><h1 id="4-《生命，民间记忆之史铁生》"><a href="#4-《生命，民间记忆之史铁生》" class="headerlink" title="4.《生命，民间记忆之史铁生》"></a>4.《生命，民间记忆之史铁生》</h1>]]></content>
-      <categories>
-        <category>book reading</category>
-      </categories>
-      <tags>
-        <tag>-读书笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -893,16 +903,6 @@
       <tags>
         <tag>python程序人生</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>我的第一篇博文</title>
-    <url>/2016/03/01/1/</url>
-    <content><![CDATA[<p>这是<strong>新的开始</strong>，我用hexo创建了第一篇文章。</p>
-<p>通过下面的命令，就可以创建新文章</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new 新的开始</span><br></pre></td></tr></table></figure>
-
-<p>感觉非常好。</p>
-]]></content>
   </entry>
   <entry>
     <title>hexo(1)   hexo自定义域名以及解析</title>
@@ -1016,6 +1016,30 @@
       </tags>
   </entry>
   <entry>
+    <title>手动输入网易云音乐歌单创建hexo 音乐播放器</title>
+    <url>/2018/05/06/1/</url>
+    <content><![CDATA[<p><strong>!我终于来填坑啦！ <a href="/2020/04/12/1/">来这里看吧，</a></strong></p>
+<p>先挖个坑。欢迎点击左边的  <code>Music</code>来看看效果。也可以用这个链接<a href="https://blog.wyue.site/music/">https://blog.wyue.site/music/</a></p>
+<p>已经实现了的是在hexo博客上，搞一个音乐播放器。<br>播放器选的是aplayer。<br>通过输入网易云音乐的歌单id，来创建播放列表。可以手动输入歌单id。</p>
+<a id="more"></a>
+
+<p>提前感谢各位大佬给的网易云音乐api。</p>
+<p>学习到的几点：</p>
+<h2 id="javascript-http-get-请求处理"><a href="#javascript-http-get-请求处理" class="headerlink" title="javascript http get 请求处理"></a>javascript http get 请求处理</h2><h2 id="javascript-json-处理"><a href="#javascript-json-处理" class="headerlink" title="javascript json 处理"></a>javascript json 处理</h2><h2 id="javascript-function-循环等"><a href="#javascript-function-循环等" class="headerlink" title="javascript function 循环等"></a>javascript function 循环等</h2><h2 id="简单css"><a href="#简单css" class="headerlink" title="简单css"></a>简单css</h2><p>生成音乐页面的全部的code 在这里</p>
+<blockquote>
+<p><a href="https://gist.githubusercontent.com/xfdywy/e7fcaaf6f1c12975455f08478881c3cf/raw/154f07a9a853bd1b1ceaa9f6bb43983b85167fcc/music.md" target="_blank" rel="noopener">https://gist.githubusercontent.com/xfdywy/e7fcaaf6f1c12975455f08478881c3cf/raw/154f07a9a853bd1b1ceaa9f6bb43983b85167fcc/music.md</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>aplayer</tag>
+        <tag>网易云音乐api</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>静态博客网页中的网易云音乐播放器</title>
     <url>/2020/04/12/1/</url>
     <content><![CDATA[<p>(终于填了<a href="/2018/05/06/1/">之前</a>的坑)</p>
@@ -1090,30 +1114,6 @@
       <tags>
         <tag>music</tag>
         <tag>hexo blog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>手动输入网易云音乐歌单创建hexo 音乐播放器</title>
-    <url>/2018/05/06/1/</url>
-    <content><![CDATA[<p><strong>!我终于来填坑啦！ <a href="/2020/04/12/1/">来这里看吧，</a></strong></p>
-<p>先挖个坑。欢迎点击左边的  <code>Music</code>来看看效果。也可以用这个链接<a href="https://blog.wyue.site/music/">https://blog.wyue.site/music/</a></p>
-<p>已经实现了的是在hexo博客上，搞一个音乐播放器。<br>播放器选的是aplayer。<br>通过输入网易云音乐的歌单id，来创建播放列表。可以手动输入歌单id。</p>
-<a id="more"></a>
-
-<p>提前感谢各位大佬给的网易云音乐api。</p>
-<p>学习到的几点：</p>
-<h2 id="javascript-http-get-请求处理"><a href="#javascript-http-get-请求处理" class="headerlink" title="javascript http get 请求处理"></a>javascript http get 请求处理</h2><h2 id="javascript-json-处理"><a href="#javascript-json-处理" class="headerlink" title="javascript json 处理"></a>javascript json 处理</h2><h2 id="javascript-function-循环等"><a href="#javascript-function-循环等" class="headerlink" title="javascript function 循环等"></a>javascript function 循环等</h2><h2 id="简单css"><a href="#简单css" class="headerlink" title="简单css"></a>简单css</h2><p>生成音乐页面的全部的code 在这里</p>
-<blockquote>
-<p><a href="https://gist.githubusercontent.com/xfdywy/e7fcaaf6f1c12975455f08478881c3cf/raw/154f07a9a853bd1b1ceaa9f6bb43983b85167fcc/music.md" target="_blank" rel="noopener">https://gist.githubusercontent.com/xfdywy/e7fcaaf6f1c12975455f08478881c3cf/raw/154f07a9a853bd1b1ceaa9f6bb43983b85167fcc/music.md</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>aplayer</tag>
-        <tag>网易云音乐api</tag>
       </tags>
   </entry>
   <entry>
