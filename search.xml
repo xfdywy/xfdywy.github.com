@@ -1,25 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>c++ notebook</title>
-    <url>/2016/08/10/2/</url>
-    <content><![CDATA[<p>就用这个帖子记录一下自己学习c++遇到的一些小细节吧</p>
-<p>#1 atof </p>
-<blockquote>
-<p><a href="http://blog.csdn.net/zhaoyl03/article/details/8176387" target="_blank" rel="noopener">http://blog.csdn.net/zhaoyl03/article/details/8176387</a></p>
-</blockquote>
-<p>它将ascII字符串转换为相应的单精度浮点数，比如传入”1.234”，经过处理后就返回float类型的数1.234 。类似的还有atoi 、atol、itoa、ftoa等等。</p>
-<p>#2 随机数</p>
-<blockquote>
-<p><a href="http://www.cnblogs.com/egmkang/archive/2012/09/06/2673253.html" target="_blank" rel="noopener">http://www.cnblogs.com/egmkang/archive/2012/09/06/2673253.html</a></p>
-</blockquote>
-<p>　　标准把随机数抽象成随机数引擎和分布两部分.引擎用来产生随机数,分布产生特定分布的随机数(比如平均分布,正太分布等).</p>
-<p>　　标准提供三种常用的引擎:linear_congruential_engine,mersenne_twister_engine和subtract_with_carry_engine.第一种是线性同余算法,第二种是梅森旋转算法,第三种带进位的线性同余算法.第一种是最常用的,而且速度也是非常快的; 第二种号称是最好的伪随机数生成器;第三种没用过….</p>
-<p>　　随机数引擎接受一个整形参数当作种子,不提供的话,会使用默认值. 推荐使用random_device来产生一个随机数当作种子.(windows下爱咋整咋整,谁叫windows的random_device是调用rand_s)</p>
-]]></content>
-      <tags>
-        <tag>-c++程序人生</tag>
-      </tags>
+    <title>linux/git</title>
+    <url>/2018/03/29/1/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Latex 写中文毕业论文</title>
@@ -112,9 +96,25 @@
       </tags>
   </entry>
   <entry>
-    <title>linux/git</title>
-    <url>/2018/03/29/1/</url>
-    <content><![CDATA[]]></content>
+    <title>c++ notebook</title>
+    <url>/2016/08/10/2/</url>
+    <content><![CDATA[<p>就用这个帖子记录一下自己学习c++遇到的一些小细节吧</p>
+<p>#1 atof </p>
+<blockquote>
+<p><a href="http://blog.csdn.net/zhaoyl03/article/details/8176387" target="_blank" rel="noopener">http://blog.csdn.net/zhaoyl03/article/details/8176387</a></p>
+</blockquote>
+<p>它将ascII字符串转换为相应的单精度浮点数，比如传入”1.234”，经过处理后就返回float类型的数1.234 。类似的还有atoi 、atol、itoa、ftoa等等。</p>
+<p>#2 随机数</p>
+<blockquote>
+<p><a href="http://www.cnblogs.com/egmkang/archive/2012/09/06/2673253.html" target="_blank" rel="noopener">http://www.cnblogs.com/egmkang/archive/2012/09/06/2673253.html</a></p>
+</blockquote>
+<p>　　标准把随机数抽象成随机数引擎和分布两部分.引擎用来产生随机数,分布产生特定分布的随机数(比如平均分布,正太分布等).</p>
+<p>　　标准提供三种常用的引擎:linear_congruential_engine,mersenne_twister_engine和subtract_with_carry_engine.第一种是线性同余算法,第二种是梅森旋转算法,第三种带进位的线性同余算法.第一种是最常用的,而且速度也是非常快的; 第二种号称是最好的伪随机数生成器;第三种没用过….</p>
+<p>　　随机数引擎接受一个整形参数当作种子,不提供的话,会使用默认值. 推荐使用random_device来产生一个随机数当作种子.(windows下爱咋整咋整,谁叫windows的random_device是调用rand_s)</p>
+]]></content>
+      <tags>
+        <tag>-c++程序人生</tag>
+      </tags>
   </entry>
   <entry>
     <title>折腾linux服务器</title>
@@ -617,6 +617,14 @@
       </tags>
   </entry>
   <entry>
+    <title>连续时间离散状态马氏链的转移概率矩阵与转移速率矩阵</title>
+    <url>/2020/04/09/1/</url>
+    <content><![CDATA[]]></content>
+      <tags>
+        <tag>马氏链</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>分位数回归</title>
     <url>/2020/04/17/2/</url>
     <content><![CDATA[<h1 id="分位数回归的直观"><a href="#分位数回归的直观" class="headerlink" title="分位数回归的直观"></a>分位数回归的直观</h1><p>给定一些样本数据 $(x_i, y_i)$，我们可以理解成 给定一个 $x_i$, 我们就有一个 $Y_i$ 的分布，$y_i$ 是一个采样出来的样本，被我们所观测。 最小二乘估计是要去拟合 $x$ 和 $mean(Y)$ 之间的关系。 而分位数回归则是要拟合某分位数。</p>
@@ -645,11 +653,18 @@
       </tags>
   </entry>
   <entry>
-    <title>连续时间离散状态马氏链的转移概率矩阵与转移速率矩阵</title>
-    <url>/2020/04/09/1/</url>
-    <content><![CDATA[]]></content>
+    <title>我与我的小可爱</title>
+    <url>/2018/02/14/1/</url>
+    <content><![CDATA[<p><img data-src="https://cdn.jsdelivr.net/gh/xfdywy/blogResource@master/image/%E8%AF%8D%E4%BA%91.png" alt="词云1"></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/xfdywy/blogResource@master/image/%E8%AF%8D%E4%BA%911.png" alt="词云"></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/xfdywy/blogResource@master/image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20180214161417.jpg" alt="微信图片_20180214161417"></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/xfdywy/blogResource@master/image/love.jpg" alt="lalal"></p>
+<h1 id="2016年10月4日"><a href="#2016年10月4日" class="headerlink" title="2016年10月4日"></a>2016年10月4日</h1><h1 id="2017年3月9日"><a href="#2017年3月9日" class="headerlink" title="2017年3月9日"></a>2017年3月9日</h1><h1 id="2018年2月14日"><a href="#2018年2月14日" class="headerlink" title="2018年2月14日"></a>2018年2月14日</h1>]]></content>
+      <categories>
+        <category>book reading</category>
+      </categories>
       <tags>
-        <tag>马氏链</tag>
+        <tag>-读书笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -670,21 +685,6 @@
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 <p> <img data-src="https://img-1253424161.cos.ap-shanghai.myqcloud.com/test.gif" alt="123"></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>我与我的小可爱</title>
-    <url>/2018/02/14/1/</url>
-    <content><![CDATA[<p><img data-src="https://cdn.jsdelivr.net/gh/xfdywy/blogResource@master/image/%E8%AF%8D%E4%BA%91.png" alt="词云1"></p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/xfdywy/blogResource@master/image/%E8%AF%8D%E4%BA%911.png" alt="词云"></p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/xfdywy/blogResource@master/image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20180214161417.jpg" alt="微信图片_20180214161417"></p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/xfdywy/blogResource@master/image/love.jpg" alt="lalal"></p>
-<h1 id="2016年10月4日"><a href="#2016年10月4日" class="headerlink" title="2016年10月4日"></a>2016年10月4日</h1><h1 id="2017年3月9日"><a href="#2017年3月9日" class="headerlink" title="2017年3月9日"></a>2017年3月9日</h1><h1 id="2018年2月14日"><a href="#2018年2月14日" class="headerlink" title="2018年2月14日"></a>2018年2月14日</h1>]]></content>
-      <categories>
-        <category>book reading</category>
-      </categories>
-      <tags>
-        <tag>-读书笔记</tag>
-      </tags>
   </entry>
   <entry>
     <title>我的第一篇博文</title>
@@ -866,6 +866,25 @@
       </tags>
   </entry>
   <entry>
+    <title>python notebook</title>
+    <url>/2016/08/10/1/</url>
+    <content><![CDATA[<p>就用这个帖子记录一下自己学习python遇到的一些小细节吧</p>
+<p>#1      ndarray.swapaxes(axis1, axis2) : 交换两个轴的元素后的矩阵.</p>
+<blockquote>
+<p><a href="http://blog.csdn.net/qq403977698/article/details/47254597" target="_blank" rel="noopener">http://blog.csdn.net/qq403977698/article/details/47254597</a><br>转魔方，始终的面对着的面向下为第一维度，水平为第二维度<br>#2      [x for x in list if r.match(x)]<br><a href="http://stackoverflow.com/questions/3640359/regular-expressions-search-in-list" target="_blank" rel="noopener">http://stackoverflow.com/questions/3640359/regular-expressions-search-in-list</a></p>
+</blockquote>
+<p>#3<br>names = df.columns.tolist()</p>
+<p>names[names.index(‘two’)] = ‘new_name’</p>
+<p>df.columns = names</p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python程序人生</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>支持Python3的腾讯云 对象存储 cos python3 sdk</title>
     <url>/2018/04/09/1/</url>
     <content><![CDATA[<p>今天填了一天的坑。成果是 qcloud_cos_py3.<br>腾讯云的cos python sdk cos-python-sdk-v5 只支持python2.7， 而我的qt项目要 python3.* .</p>
@@ -883,25 +902,6 @@
         <tag>py2to3</tag>
         <tag>腾讯云cos</tag>
         <tag>qcloud_cos_py3</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python notebook</title>
-    <url>/2016/08/10/1/</url>
-    <content><![CDATA[<p>就用这个帖子记录一下自己学习python遇到的一些小细节吧</p>
-<p>#1      ndarray.swapaxes(axis1, axis2) : 交换两个轴的元素后的矩阵.</p>
-<blockquote>
-<p><a href="http://blog.csdn.net/qq403977698/article/details/47254597" target="_blank" rel="noopener">http://blog.csdn.net/qq403977698/article/details/47254597</a><br>转魔方，始终的面对着的面向下为第一维度，水平为第二维度<br>#2      [x for x in list if r.match(x)]<br><a href="http://stackoverflow.com/questions/3640359/regular-expressions-search-in-list" target="_blank" rel="noopener">http://stackoverflow.com/questions/3640359/regular-expressions-search-in-list</a></p>
-</blockquote>
-<p>#3<br>names = df.columns.tolist()</p>
-<p>names[names.index(‘two’)] = ‘new_name’</p>
-<p>df.columns = names</p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python程序人生</tag>
       </tags>
   </entry>
   <entry>
