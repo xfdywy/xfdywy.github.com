@@ -24,13 +24,13 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"wyue.name","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"blog.wyue.site","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":true,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="分位数回归的直观给定一些样本数据 $(x_i, y_i)$，我们可以理解成 给定一个 $x_i$, 我们就有一个 $Y_i$ 的分布，$y_i$ 是一个采样出来的样本，被我们所观测。 最小二乘估计是要去拟合 $x$ 和 $mean(Y)$ 之间的关系。 而分位数回归则是要拟合某分位数。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="分位数回归">
-<meta property="og:url" content="https://wyue.name/2020/04/17/2/index.html">
+<meta property="og:url" content="https://blog.wyue.site/2020/04/17/2/index.html">
 <meta property="og:site_name" content="Yue&#39;s  blog">
 <meta property="og:description" content="分位数回归的直观给定一些样本数据 $(x_i, y_i)$，我们可以理解成 给定一个 $x_i$, 我们就有一个 $Y_i$ 的分布，$y_i$ 是一个采样出来的样本，被我们所观测。 最小二乘估计是要去拟合 $x$ 和 $mean(Y)$ 之间的关系。 而分位数回归则是要拟合某分位数。">
 <meta property="og:locale" content="zh_CN">
@@ -42,7 +42,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://img-1253424161.cos.ap-shanghai.myqcloud.com/xsj/2019/12/1575889988287.png">
 
-<link rel="canonical" href="https://wyue.name/2020/04/17/2/">
+<link rel="canonical" href="https://blog.wyue.site/2020/04/17/2/">
 
 
 <script id="page-configurations">
@@ -63,7 +63,7 @@
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?8773a162a2ca0e07ba3febfb6e7c7de4";
+      hm.src = "https://hm.baidu.com/hm.js?734f4e3c2217ead003bc35423296c5df";
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
@@ -234,7 +234,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://wyue.name/2020/04/17/2/">
+    <link itemprop="mainEntityOfPage" href="https://blog.wyue.site/2020/04/17/2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/xfdywy/blogResource@master/image/avatar.png">
@@ -354,7 +354,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://wyue.name/2020/04/17/2/" title="分位数回归">https://wyue.name/2020/04/17/2/</a>
+    <a href="https://blog.wyue.site/2020/04/17/2/" title="分位数回归">https://blog.wyue.site/2020/04/17/2/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！

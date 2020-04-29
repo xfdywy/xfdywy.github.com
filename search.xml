@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>linux/git</title>
-    <url>/2018/03/29/1/</url>
-    <content><![CDATA[]]></content>
+    <title>c++ notebook</title>
+    <url>/2016/08/10/2/</url>
+    <content><![CDATA[<p>就用这个帖子记录一下自己学习c++遇到的一些小细节吧</p>
+<p>#1 atof </p>
+<blockquote>
+<p><a href="http://blog.csdn.net/zhaoyl03/article/details/8176387" target="_blank" rel="noopener">http://blog.csdn.net/zhaoyl03/article/details/8176387</a></p>
+</blockquote>
+<p>它将ascII字符串转换为相应的单精度浮点数，比如传入”1.234”，经过处理后就返回float类型的数1.234 。类似的还有atoi 、atol、itoa、ftoa等等。</p>
+<p>#2 随机数</p>
+<blockquote>
+<p><a href="http://www.cnblogs.com/egmkang/archive/2012/09/06/2673253.html" target="_blank" rel="noopener">http://www.cnblogs.com/egmkang/archive/2012/09/06/2673253.html</a></p>
+</blockquote>
+<p>　　标准把随机数抽象成随机数引擎和分布两部分.引擎用来产生随机数,分布产生特定分布的随机数(比如平均分布,正太分布等).</p>
+<p>　　标准提供三种常用的引擎:linear_congruential_engine,mersenne_twister_engine和subtract_with_carry_engine.第一种是线性同余算法,第二种是梅森旋转算法,第三种带进位的线性同余算法.第一种是最常用的,而且速度也是非常快的; 第二种号称是最好的伪随机数生成器;第三种没用过….</p>
+<p>　　随机数引擎接受一个整形参数当作种子,不提供的话,会使用默认值. 推荐使用random_device来产生一个随机数当作种子.(windows下爱咋整咋整,谁叫windows的random_device是调用rand_s)</p>
+]]></content>
+      <tags>
+        <tag>-c++程序人生</tag>
+      </tags>
   </entry>
   <entry>
     <title>Latex 写中文毕业论文</title>
@@ -96,24 +112,30 @@
       </tags>
   </entry>
   <entry>
-    <title>c++ notebook</title>
-    <url>/2016/08/10/2/</url>
-    <content><![CDATA[<p>就用这个帖子记录一下自己学习c++遇到的一些小细节吧</p>
-<p>#1 atof </p>
+    <title>linux/git</title>
+    <url>/2018/03/29/1/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>vnc 连接服务器</title>
+    <url>/2018/04/23/1/</url>
+    <content><![CDATA[<p>vnc 连接服务器 使用 Xfce desktop tab 键不能自动补全<br>这是因为tab键被系统默认为是 switch window的快捷键了，修改了就好了</p>
+<a id="more"></a>
+
 <blockquote>
-<p><a href="http://blog.csdn.net/zhaoyl03/article/details/8176387" target="_blank" rel="noopener">http://blog.csdn.net/zhaoyl03/article/details/8176387</a></p>
+<p>Application Menu &gt; Settings &gt; Window Manager<br>选择 Keyboard 标签 清除 Switch<br>window  的快捷键设置</p>
 </blockquote>
-<p>它将ascII字符串转换为相应的单精度浮点数，比如传入”1.234”，经过处理后就返回float类型的数1.234 。类似的还有atoi 、atol、itoa、ftoa等等。</p>
-<p>#2 随机数</p>
+<p>vnc 连接服务器 使用xfce desktop  系统时间，桌面切换等图标没有靠右，类似于windows右下键的时间状态栏等，看起来很难受。设置方法为：</p>
 <blockquote>
-<p><a href="http://www.cnblogs.com/egmkang/archive/2012/09/06/2673253.html" target="_blank" rel="noopener">http://www.cnblogs.com/egmkang/archive/2012/09/06/2673253.html</a></p>
+<p>面板空白处右击 &gt; panel &gt; panel preferences &gt; items<br>点右边的加号，新建一个separator（分隔符），选中新建的separator，用上下按钮调整位置，分隔符后面的都靠右<br>双击 separator，保证 设置成expand<br>完成， 最终设置大概是这样<br><img data-src="https://img-1253424161.cos.ap-shanghai.myqcloud.com/xsj/2018/4/1523849612319.jpg" alt="vnc panel"></p>
 </blockquote>
-<p>　　标准把随机数抽象成随机数引擎和分布两部分.引擎用来产生随机数,分布产生特定分布的随机数(比如平均分布,正太分布等).</p>
-<p>　　标准提供三种常用的引擎:linear_congruential_engine,mersenne_twister_engine和subtract_with_carry_engine.第一种是线性同余算法,第二种是梅森旋转算法,第三种带进位的线性同余算法.第一种是最常用的,而且速度也是非常快的; 第二种号称是最好的伪随机数生成器;第三种没用过….</p>
-<p>　　随机数引擎接受一个整形参数当作种子,不提供的话,会使用默认值. 推荐使用random_device来产生一个随机数当作种子.(windows下爱咋整咋整,谁叫windows的random_device是调用rand_s)</p>
 ]]></content>
       <tags>
-        <tag>-c++程序人生</tag>
+        <tag>vnc</tag>
+        <tag>tab</tag>
+        <tag>xfce</tag>
+        <tag>自动补全</tag>
+        <tag>状态栏</tag>
       </tags>
   </entry>
   <entry>
@@ -228,28 +250,6 @@
         <tag>linux</tag>
         <tag>web</tag>
         <tag>nginx</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>vnc 连接服务器</title>
-    <url>/2018/04/23/1/</url>
-    <content><![CDATA[<p>vnc 连接服务器 使用 Xfce desktop tab 键不能自动补全<br>这是因为tab键被系统默认为是 switch window的快捷键了，修改了就好了</p>
-<a id="more"></a>
-
-<blockquote>
-<p>Application Menu &gt; Settings &gt; Window Manager<br>选择 Keyboard 标签 清除 Switch<br>window  的快捷键设置</p>
-</blockquote>
-<p>vnc 连接服务器 使用xfce desktop  系统时间，桌面切换等图标没有靠右，类似于windows右下键的时间状态栏等，看起来很难受。设置方法为：</p>
-<blockquote>
-<p>面板空白处右击 &gt; panel &gt; panel preferences &gt; items<br>点右边的加号，新建一个separator（分隔符），选中新建的separator，用上下按钮调整位置，分隔符后面的都靠右<br>双击 separator，保证 设置成expand<br>完成， 最终设置大概是这样<br><img data-src="https://img-1253424161.cos.ap-shanghai.myqcloud.com/xsj/2018/4/1523849612319.jpg" alt="vnc panel"></p>
-</blockquote>
-]]></content>
-      <tags>
-        <tag>vnc</tag>
-        <tag>tab</tag>
-        <tag>xfce</tag>
-        <tag>自动补全</tag>
-        <tag>状态栏</tag>
       </tags>
   </entry>
   <entry>
@@ -376,8 +376,8 @@
         <category>linux</category>
       </categories>
       <tags>
-        <tag>linux</tag>
         <tag>vnc</tag>
+        <tag>linux</tag>
         <tag>openssh</tag>
         <tag>mysql</tag>
         <tag>apache httpd</tag>
@@ -617,14 +617,6 @@
       </tags>
   </entry>
   <entry>
-    <title>连续时间离散状态马氏链的转移概率矩阵与转移速率矩阵</title>
-    <url>/2020/04/09/1/</url>
-    <content><![CDATA[]]></content>
-      <tags>
-        <tag>马氏链</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>分位数回归</title>
     <url>/2020/04/17/2/</url>
     <content><![CDATA[<h1 id="分位数回归的直观"><a href="#分位数回归的直观" class="headerlink" title="分位数回归的直观"></a>分位数回归的直观</h1><p>给定一些样本数据 $(x_i, y_i)$，我们可以理解成 给定一个 $x_i$, 我们就有一个 $Y_i$ 的分布，$y_i$ 是一个采样出来的样本，被我们所观测。 最小二乘估计是要去拟合 $x$ 和 $mean(Y)$ 之间的关系。 而分位数回归则是要拟合某分位数。</p>
@@ -653,18 +645,11 @@
       </tags>
   </entry>
   <entry>
-    <title>我与我的小可爱</title>
-    <url>/2018/02/14/1/</url>
-    <content><![CDATA[<p><img data-src="https://cdn.jsdelivr.net/gh/xfdywy/blogResource@master/image/%E8%AF%8D%E4%BA%91.png" alt="词云1"></p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/xfdywy/blogResource@master/image/%E8%AF%8D%E4%BA%911.png" alt="词云"></p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/xfdywy/blogResource@master/image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20180214161417.jpg" alt="微信图片_20180214161417"></p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/xfdywy/blogResource@master/image/love.jpg" alt="lalal"></p>
-<h1 id="2016年10月4日"><a href="#2016年10月4日" class="headerlink" title="2016年10月4日"></a>2016年10月4日</h1><h1 id="2017年3月9日"><a href="#2017年3月9日" class="headerlink" title="2017年3月9日"></a>2017年3月9日</h1><h1 id="2018年2月14日"><a href="#2018年2月14日" class="headerlink" title="2018年2月14日"></a>2018年2月14日</h1>]]></content>
-      <categories>
-        <category>book reading</category>
-      </categories>
+    <title>连续时间离散状态马氏链的转移概率矩阵与转移速率矩阵</title>
+    <url>/2020/04/09/1/</url>
+    <content><![CDATA[]]></content>
       <tags>
-        <tag>-读书笔记</tag>
+        <tag>马氏链</tag>
       </tags>
   </entry>
   <entry>
@@ -687,14 +672,19 @@
 ]]></content>
   </entry>
   <entry>
-    <title>我的第一篇博文</title>
-    <url>/2016/03/01/1/</url>
-    <content><![CDATA[<p>这是<strong>新的开始</strong>，我用hexo创建了第一篇文章。</p>
-<p>通过下面的命令，就可以创建新文章</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new 新的开始</span><br></pre></td></tr></table></figure>
-
-<p>感觉非常好。</p>
-]]></content>
+    <title>我与我的小可爱</title>
+    <url>/2018/02/14/1/</url>
+    <content><![CDATA[<p><img data-src="https://cdn.jsdelivr.net/gh/xfdywy/blogResource@master/image/%E8%AF%8D%E4%BA%91.png" alt="词云1"></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/xfdywy/blogResource@master/image/%E8%AF%8D%E4%BA%911.png" alt="词云"></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/xfdywy/blogResource@master/image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20180214161417.jpg" alt="微信图片_20180214161417"></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/xfdywy/blogResource@master/image/love.jpg" alt="lalal"></p>
+<h1 id="2016年10月4日"><a href="#2016年10月4日" class="headerlink" title="2016年10月4日"></a>2016年10月4日</h1><h1 id="2017年3月9日"><a href="#2017年3月9日" class="headerlink" title="2017年3月9日"></a>2017年3月9日</h1><h1 id="2018年2月14日"><a href="#2018年2月14日" class="headerlink" title="2018年2月14日"></a>2018年2月14日</h1>]]></content>
+      <categories>
+        <category>book reading</category>
+      </categories>
+      <tags>
+        <tag>-读书笔记</tag>
+      </tags>
   </entry>
   <entry>
     <title>&#39;wangyuehahah&#39;</title>
@@ -866,25 +856,6 @@
       </tags>
   </entry>
   <entry>
-    <title>python notebook</title>
-    <url>/2016/08/10/1/</url>
-    <content><![CDATA[<p>就用这个帖子记录一下自己学习python遇到的一些小细节吧</p>
-<p>#1      ndarray.swapaxes(axis1, axis2) : 交换两个轴的元素后的矩阵.</p>
-<blockquote>
-<p><a href="http://blog.csdn.net/qq403977698/article/details/47254597" target="_blank" rel="noopener">http://blog.csdn.net/qq403977698/article/details/47254597</a><br>转魔方，始终的面对着的面向下为第一维度，水平为第二维度<br>#2      [x for x in list if r.match(x)]<br><a href="http://stackoverflow.com/questions/3640359/regular-expressions-search-in-list" target="_blank" rel="noopener">http://stackoverflow.com/questions/3640359/regular-expressions-search-in-list</a></p>
-</blockquote>
-<p>#3<br>names = df.columns.tolist()</p>
-<p>names[names.index(‘two’)] = ‘new_name’</p>
-<p>df.columns = names</p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python程序人生</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>支持Python3的腾讯云 对象存储 cos python3 sdk</title>
     <url>/2018/04/09/1/</url>
     <content><![CDATA[<p>今天填了一天的坑。成果是 qcloud_cos_py3.<br>腾讯云的cos python sdk cos-python-sdk-v5 只支持python2.7， 而我的qt项目要 python3.* .</p>
@@ -905,9 +876,38 @@
       </tags>
   </entry>
   <entry>
+    <title>python notebook</title>
+    <url>/2016/08/10/1/</url>
+    <content><![CDATA[<p>就用这个帖子记录一下自己学习python遇到的一些小细节吧</p>
+<p>#1      ndarray.swapaxes(axis1, axis2) : 交换两个轴的元素后的矩阵.</p>
+<blockquote>
+<p><a href="http://blog.csdn.net/qq403977698/article/details/47254597" target="_blank" rel="noopener">http://blog.csdn.net/qq403977698/article/details/47254597</a><br>转魔方，始终的面对着的面向下为第一维度，水平为第二维度<br>#2      [x for x in list if r.match(x)]<br><a href="http://stackoverflow.com/questions/3640359/regular-expressions-search-in-list" target="_blank" rel="noopener">http://stackoverflow.com/questions/3640359/regular-expressions-search-in-list</a></p>
+</blockquote>
+<p>#3<br>names = df.columns.tolist()</p>
+<p>names[names.index(‘two’)] = ‘new_name’</p>
+<p>df.columns = names</p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python程序人生</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我的第一篇博文</title>
+    <url>/2016/03/01/1/</url>
+    <content><![CDATA[<p>这是<strong>新的开始</strong>，我用hexo创建了第一篇文章。</p>
+<p>通过下面的命令，就可以创建新文章</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new 新的开始</span><br></pre></td></tr></table></figure>
+
+<p>感觉非常好。</p>
+]]></content>
+  </entry>
+  <entry>
     <title>hexo(1)   hexo自定义域名以及解析</title>
     <url>/2018/03/27/1/</url>
-    <content><![CDATA[<p>最近又有点空，把丢弃好久的blog又拿出来折腾了一番。申请了一个付费域名 <a href="http://wyue.name">wyue.name</a>不得不说，在msra这一年多依赖，不知不觉代码能力比以前还是提高了很多的<del>（自吹一波。。。溜了）</del>。<br>这次想要记录一下，hexo博客搭建过程中个性化域名的相关事情。主要是从个性化域名的绑定，到dns的解析的整个过程。涉及到的坑主要有</p>
+    <content><![CDATA[<p>最近又有点空，把丢弃好久的blog又拿出来折腾了一番。申请了一个付费域名 <a href="http://blog.wyue.site">blog.wyue.site</a>不得不说，在msra这一年多依赖，不知不觉代码能力比以前还是提高了很多的<del>（自吹一波。。。溜了）</del>。<br>这次想要记录一下，hexo博客搭建过程中个性化域名的相关事情。主要是从个性化域名的绑定，到dns的解析的整个过程。涉及到的坑主要有</p>
 <ol>
 <li>dns 解析的相关基础知识</li>
 <li>国内博客托管到 <a href="https://coding.net/pages/" target="_blank" rel="noopener">coding</a> 国外托管到<a href="https://pages.github.com/" target="_blank" rel="noopener">github</a></li>
@@ -1016,30 +1016,6 @@
       </tags>
   </entry>
   <entry>
-    <title>手动输入网易云音乐歌单创建hexo 音乐播放器</title>
-    <url>/2018/05/06/1/</url>
-    <content><![CDATA[<p><strong>!我终于来填坑啦！ <a href="/2020/04/12/1/">来这里看吧，</a></strong></p>
-<p>先挖个坑。欢迎点击左边的  <code>Music</code>来看看效果。也可以用这个链接<a href="https://wyue.name/music/">https://wyue.name/music/</a></p>
-<p>已经实现了的是在hexo博客上，搞一个音乐播放器。<br>播放器选的是aplayer。<br>通过输入网易云音乐的歌单id，来创建播放列表。可以手动输入歌单id。</p>
-<a id="more"></a>
-
-<p>提前感谢各位大佬给的网易云音乐api。</p>
-<p>学习到的几点：</p>
-<h2 id="javascript-http-get-请求处理"><a href="#javascript-http-get-请求处理" class="headerlink" title="javascript http get 请求处理"></a>javascript http get 请求处理</h2><h2 id="javascript-json-处理"><a href="#javascript-json-处理" class="headerlink" title="javascript json 处理"></a>javascript json 处理</h2><h2 id="javascript-function-循环等"><a href="#javascript-function-循环等" class="headerlink" title="javascript function 循环等"></a>javascript function 循环等</h2><h2 id="简单css"><a href="#简单css" class="headerlink" title="简单css"></a>简单css</h2><p>生成音乐页面的全部的code 在这里</p>
-<blockquote>
-<p><a href="https://gist.githubusercontent.com/xfdywy/e7fcaaf6f1c12975455f08478881c3cf/raw/154f07a9a853bd1b1ceaa9f6bb43983b85167fcc/music.md" target="_blank" rel="noopener">https://gist.githubusercontent.com/xfdywy/e7fcaaf6f1c12975455f08478881c3cf/raw/154f07a9a853bd1b1ceaa9f6bb43983b85167fcc/music.md</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>aplayer</tag>
-        <tag>网易云音乐api</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>静态博客网页中的网易云音乐播放器</title>
     <url>/2020/04/12/1/</url>
     <content><![CDATA[<p>(终于填了<a href="/2018/05/06/1/">之前</a>的坑)</p>
@@ -1098,7 +1074,7 @@
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>主要是学习了axio的使用，以及async 和await的使用。<br>此外82到93行简单试验了一下addEventListener的用法。</p>
 <p>作为一个外行，如果有更好的想法，欢迎与我交流，可以在博文下面留言，也可以去博客的留言板（Board）留言。</p>
 <blockquote>
-<p>我博客音乐的网址： <a href="https://www.wyue.name/music" target="_blank" rel="noopener">https://www.wyue.name/music</a></p>
+<p>我博客音乐的网址： <a href="https://www.blog.wyue.site/music" target="_blank" rel="noopener">https://www.blog.wyue.site/music</a></p>
 </blockquote>
 <blockquote>
 <p>APlayer 网址： <a href="https://aplayer.js.org/#/" target="_blank" rel="noopener">https://aplayer.js.org/#/</a></p>
@@ -1114,6 +1090,30 @@
       <tags>
         <tag>music</tag>
         <tag>hexo blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>手动输入网易云音乐歌单创建hexo 音乐播放器</title>
+    <url>/2018/05/06/1/</url>
+    <content><![CDATA[<p><strong>!我终于来填坑啦！ <a href="/2020/04/12/1/">来这里看吧，</a></strong></p>
+<p>先挖个坑。欢迎点击左边的  <code>Music</code>来看看效果。也可以用这个链接<a href="https://blog.wyue.site/music/">https://blog.wyue.site/music/</a></p>
+<p>已经实现了的是在hexo博客上，搞一个音乐播放器。<br>播放器选的是aplayer。<br>通过输入网易云音乐的歌单id，来创建播放列表。可以手动输入歌单id。</p>
+<a id="more"></a>
+
+<p>提前感谢各位大佬给的网易云音乐api。</p>
+<p>学习到的几点：</p>
+<h2 id="javascript-http-get-请求处理"><a href="#javascript-http-get-请求处理" class="headerlink" title="javascript http get 请求处理"></a>javascript http get 请求处理</h2><h2 id="javascript-json-处理"><a href="#javascript-json-处理" class="headerlink" title="javascript json 处理"></a>javascript json 处理</h2><h2 id="javascript-function-循环等"><a href="#javascript-function-循环等" class="headerlink" title="javascript function 循环等"></a>javascript function 循环等</h2><h2 id="简单css"><a href="#简单css" class="headerlink" title="简单css"></a>简单css</h2><p>生成音乐页面的全部的code 在这里</p>
+<blockquote>
+<p><a href="https://gist.githubusercontent.com/xfdywy/e7fcaaf6f1c12975455f08478881c3cf/raw/154f07a9a853bd1b1ceaa9f6bb43983b85167fcc/music.md" target="_blank" rel="noopener">https://gist.githubusercontent.com/xfdywy/e7fcaaf6f1c12975455f08478881c3cf/raw/154f07a9a853bd1b1ceaa9f6bb43983b85167fcc/music.md</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>aplayer</tag>
+        <tag>网易云音乐api</tag>
       </tags>
   </entry>
   <entry>
